@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Grupo" table="grupo">
+    <id name="idgrupo" type="integer" column="idGrupo">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="curso" type="string" column="Curso" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Será: 1º, 2º...</option>
+      </options>
+    </field>
+    <field name="turno" type="string" column="Turno" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Turno: mañana o tarde
+</option>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

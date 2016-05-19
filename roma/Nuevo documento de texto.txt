@@ -1,0 +1,3 @@
+https://symfony.com/doc/current/cookbook/security/entity_provider.html
+https://symfony.com/doc/current/cookbook/security/form_login_setup.html
+https://symfony.com/doc/current/book/security.html
