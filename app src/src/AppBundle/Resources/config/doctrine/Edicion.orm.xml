@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Edicion" table="edicion">
+    <indexes>
+      <index name="fk_Edicion_Estado1_idx" columns="Estado_idEstado"/>
+      <index name="fk_Edicion_Actividad1_idx" columns="Actividad_idActividad"/>
+    </indexes>
+    <id name="idedicion" type="integer" column="idEdicion">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="fechaEdicion" type="date" column="Fecha_Edicion" nullable="true"/>
+    <field name="autorizacion" type="string" column="Autorizacion" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Indica si está autorizado: 1 (sí está autorizado), 0 (no está autorizado). Por defecto sí.</option>
+        <option name="default">1</option>
+      </options>
+    </field>
+    <field name="menoresEdad" type="string" column="Menores_Edad" length="45" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Menores de edad: 1 (sí hay menores), 0 (no hay menores)</option>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="observaciones" type="string" column="Observaciones" length="1000" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Observaciones y solicitud de recursos</option>
+      </options>
+    </field>
+    <field name="idciclo" type="integer" column="idCiclo" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <many-to-one field="actividadactividad" target-entity="Actividad" fetch="LAZY">
+      <join-columns>
+        <join-column name="Actividad_idActividad" referenced-column-name="idActividad"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="estadoestado" target-entity="Estado" fetch="LAZY">
+      <join-columns>
+        <join-column name="Estado_idEstado" referenced-column-name="idEstado"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

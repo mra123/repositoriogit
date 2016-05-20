@@ -1,0 +1,81 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Edicion
+ *
+ * @ORM\Table(name="edicion", indexes={@ORM\Index(name="fk_Edicion_Estado1_idx", columns={"Estado_idEstado"}), @ORM\Index(name="fk_Edicion_Actividad1_idx", columns={"Actividad_idActividad"})})
+ * @ORM\Entity
+ */
+class Edicion
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Fecha_Edicion", type="date", nullable=true)
+     */
+    private $fechaEdicion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Autorizacion", type="string", length=45, nullable=true)
+     */
+    private $autorizacion = '1';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Menores_Edad", type="string", length=45, nullable=true)
+     */
+    private $menoresEdad = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Observaciones", type="string", length=1000, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idCiclo", type="integer", nullable=true)
+     */
+    private $idciclo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idEdicion", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idedicion;
+
+    /**
+     * @var \AppBundle\Entity\Actividad
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Actividad")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Actividad_idActividad", referencedColumnName="idActividad")
+     * })
+     */
+    private $actividadactividad;
+
+    /**
+     * @var \AppBundle\Entity\Estado
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Estado")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Estado_idEstado", referencedColumnName="idEstado")
+     * })
+     */
+    private $estadoestado;
+
+
+}
+

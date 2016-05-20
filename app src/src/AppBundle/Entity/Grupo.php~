@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Grupo
+ *
+ * @ORM\Table(name="grupo")
+ * @ORM\Entity
+ */
+class Grupo
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Curso", type="string", length=45, nullable=true)
+     */
+    private $curso;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Turno", type="string", length=45, nullable=true)
+     */
+    private $turno;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idGrupo", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idgrupo;
+
+
+}
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    <h2>FORMULARIO DE REGISTRO:</h2>
+        
+    {{ form_start(form) }}
+    
+    {{ form_row(form.username) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.Password) }}
+
+   
+    <br/>
+    <button type="submit">Registrar</button>
+    
+    {{ form_end(form) }}
+
+   <!-- <p> Usuario: 1 (Responsable AAEE), 2 (Jefe Departamento), 3 (Profesor).</p>
+    <p> Departamento: 1 (Informática y comunidaciones), 2 (Administración y gestión)</p>-->
+
+    </body>
+</html>

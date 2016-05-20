@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+        {% block body %}
+        <h2>ALTA DE UNA EDICIÓN:</h2>
+
+        {% block javascripts %}{% endblock %}
+
+    {{ form_start(form) }}
+        {{ form_errors(form) }}
+
+        {{ form_row(form.actividadactividad) }}
+        {{ form_row(form.fechaEdicion) }}
+        
+
+    {{ form_end(form) }}
+    
+        <P>* Obligatorio nombre y fecha</P>
+        <P>* I- Informática ; F- Finanzas y Comercio</P>
+        {% endblock %}
+    </body>
+</html>
