@@ -20,6 +20,13 @@ alta:
     path:   /alta
     defaults:  { _controller: AppBundle:Alta:alta }
 
+consulta_actividades:
+    path:   /consulta_actividades
+    defaults:  { _controller: AppBundle:Alta:alta }
+
+crear_actividad:
+    path:   /crear_actividad
+    defaults:  { _controller: AppBundle:Alta:alta }
 
 gestionar:
     path:   /gestionar

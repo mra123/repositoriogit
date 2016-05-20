@@ -9,9 +9,25 @@
     <body>
 
         {% block body %}
-        <h2>ALTA DE UNA EDICIÓN:</h2>
-
+       
         {% block javascripts %}{% endblock %}
+
+        <h3>ALTA DE UNA EDICIÓN:</h3>
+        <br/><br/>
+       
+        <div class="boton">
+            <a href="/consulta_actividades">Seleccionar una actividad existente</a>
+        </div> 
+        <br/><br/>
+
+
+        <div class="boton">
+            <a href="/crear_actividades">Crea una actividad nueva</a>
+        </div> 
+        <br/><br/>
+
+   
+{#
 
     {{ form_start(form) }}
         {{ form_errors(form) }}
@@ -23,7 +39,7 @@
     {{ form_end(form) }}
     
         <P>* Obligatorio nombre y fecha</P>
-        <P>* I- Informática ; F- Finanzas y Comercio</P>
+  #}     
         {% endblock %}
     </body>
 </html>
