@@ -1,0 +1,106 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Evaluacion
+ *
+ * @ORM\Table(name="evaluacion", indexes={@ORM\Index(name="fk_Evaluacion_Edicion1_idx", columns={"Edicion_idEdicion"})})
+ * @ORM\Entity
+ */
+class Evaluacion
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Objetivo", type="string", length=20, nullable=true)
+     */
+    private $objetivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Duracion", type="string", length=20, nullable=true)
+     */
+    private $duracion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Interes_alumno", type="string", length=20, nullable=true)
+     */
+    private $interesAlumno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Forma_impartir", type="string", length=20, nullable=true)
+     */
+    private $formaImpartir;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Dinamica_grupo", type="string", length=20, nullable=true)
+     */
+    private $dinamicaGrupo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Material", type="string", length=20, nullable=true)
+     */
+    private $material;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Instalaciones", type="string", length=20, nullable=true)
+     */
+    private $instalaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Opinion_general", type="string", length=20, nullable=true)
+     */
+    private $opinionGeneral;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Repetiria", type="string", length=20, nullable=true)
+     */
+    private $repetiria;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Observaciones", type="string", length=1000, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idEvaluacion", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idevaluacion;
+
+    /**
+     * @var \AppBundle\Entity\Edicion
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Edicion")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="Edicion_idEdicion", referencedColumnName="idEdicion")
+     * })
+     */
+    private $edicionedicion;
+
+
+}
+

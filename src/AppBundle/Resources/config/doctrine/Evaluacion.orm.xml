@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Evaluacion" table="evaluacion">
+    <indexes>
+      <index name="fk_Evaluacion_Edicion1_idx" columns="Edicion_idEdicion"/>
+    </indexes>
+    <id name="idevaluacion" type="integer" column="idEvaluacion">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="objetivo" type="string" column="Objetivo" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Nivel de objetivos de la actividad</option>
+      </options>
+    </field>
+    <field name="duracion" type="string" column="Duracion" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">¿La duración y el horario es adecuado?</option>
+      </options>
+    </field>
+    <field name="interesAlumno" type="string" column="Interes_alumno" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">¿Consideras que los alumnos han participado con interés?</option>
+      </options>
+    </field>
+    <field name="formaImpartir" type="string" column="Forma_impartir" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Forma de impartir la actividad</option>
+      </options>
+    </field>
+    <field name="dinamicaGrupo" type="string" column="Dinamica_grupo" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Dinámica de grupo</option>
+      </options>
+    </field>
+    <field name="material" type="string" column="Material" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Material que se utiliza para la actividad</option>
+      </options>
+    </field>
+    <field name="instalaciones" type="string" column="Instalaciones" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Le parecen adecuadas las instalaciones para realizar la actividad</option>
+      </options>
+    </field>
+    <field name="opinionGeneral" type="string" column="Opinion_general" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Opinión general de la actividad</option>
+      </options>
+    </field>
+    <field name="repetiria" type="string" column="Repetiria" length="20" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">Repetiría actividad para próximo curso</option>
+      </options>
+    </field>
+    <field name="observaciones" type="string" column="Observaciones" length="1000" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <many-to-one field="edicionedicion" target-entity="Edicion" fetch="LAZY">
+      <join-columns>
+        <join-column name="Edicion_idEdicion" referenced-column-name="idEdicion"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Gestion" table="gestion">
+    <indexes>
+      <index name="fk_Usuario_has_Edicion_Edicion1_idx" columns="Edicion_idEdicion"/>
+      <index name="fk_Usuario_has_Edicion_Usuario1_idx" columns="Usuario_idUsuario"/>
+    </indexes>
+    <id name="idGestion" type="integer" column="Id_gestion">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="usuariousuario" target-entity="Usuario" fetch="LAZY">
+      <join-columns>
+        <join-column name="Usuario_idUsuario" referenced-column-name="idUsuario"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="edicionedicion" target-entity="Edicion" fetch="LAZY">
+      <join-columns>
+        <join-column name="Edicion_idEdicion" referenced-column-name="idEdicion"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

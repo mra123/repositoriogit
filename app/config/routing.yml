@@ -1,0 +1,30 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login:
+    path:   /login
+    defaults:  { _controller: AppBundle:Default:login }
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
+
+inicio:
+    path:   /inicio
+    defaults:  { _controller: AppBundle:Inicio:inicio }
+
+alta:
+    path:   /alta
+    defaults:  { _controller: AppBundle:Alta:alta }
+
+
+gestionar:
+    path:   /gestionar
+    defaults:  { _controller: AppBundle:Gestionar:gestionar }
+
+
+
+
