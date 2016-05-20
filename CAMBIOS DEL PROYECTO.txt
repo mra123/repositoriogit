@@ -7,3 +7,5 @@ dia 13 de mayo
 actualizo routing.yml, defaultcontroller, agrego los controladores de las plantillas, reviso la plantilla de inicio
 --->http://twig.sensiolabs.org/documentation <--- DOCUMENTACION DE COMO HACER LAS PLANTILLAS
 
+
+###########
