@@ -4,10 +4,7 @@
 
     	<style>
 
-    		.boton {
-
-
-    		
+    		.boton {    		
     		}
 
 			h2 {
@@ -38,7 +35,11 @@
         {% block body %}
 
         <h2>Listado de actividades: </h2>
-
+		<ul>
+		{% for nombreActividad in nombre %}
+		<li><a href="/alta/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>
+		{% endfor %}
+		</ul>
         
 
         {% endblock %}

@@ -34,11 +34,10 @@ class DefaultController extends Controller
             'last_username' => $lastUsername,
             'error'         => $error,
         )   
-                    );
+		);
+    }
 
-
-        }
-	  /**
+	/**
      * @Route("/consultar/{idactividad}", name="consultar")
      */
 	public function consultarAction($idactividad)

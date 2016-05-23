@@ -155,9 +155,30 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\InicioController::inicioAction',  '_route' => 'inicio',);
         }
 
-        // alta
-        if ($pathinfo === '/alta') {
-            return array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaAction',  '_route' => 'alta',);
+        if (0 === strpos($pathinfo, '/alta')) {
+            // alta
+            if ($pathinfo === '/alta') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaAction',  '_route' => 'alta',);
+            }
+
+            // altaedicion
+            if (preg_match('#^/alta/(?P<idactividad>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'altaedicion')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaedicionAction',));
+            }
+
+        }
+
+        if (0 === strpos($pathinfo, '/c')) {
+            // consulta_actividades
+            if ($pathinfo === '/consulta_actividades') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::consulta_actividadesAction',  '_route' => 'consulta_actividades',);
+            }
+
+            // crear_actividades
+            if ($pathinfo === '/crear_actividades') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaAction',  '_route' => 'crear_actividades',);
+            }
+
         }
 
         // gestionar
