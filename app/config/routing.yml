@@ -21,7 +21,7 @@ alta:
     defaults:  { _controller: AppBundle:Alta:alta }
 
 altaedicion:
-    path:   /alta/{idactividad}
+    path:   /altaedicion/{idactividad}
     defaults:  { _controller: AppBundle:Alta:altaedicion }
 
 consulta_actividades:

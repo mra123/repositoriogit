@@ -37,7 +37,11 @@
         <h2>Listado de actividades: </h2>
 		<ul>
 		{% for nombreActividad in nombre %}
+
+		<li><a href="/altaedicion/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>
+
 		<li><a href="/alta/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>
+
 		{% endfor %}
 		</ul>
         

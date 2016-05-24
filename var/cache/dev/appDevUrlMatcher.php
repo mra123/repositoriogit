@@ -162,7 +162,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // altaedicion
-            if (preg_match('#^/alta/(?P<idactividad>[^/]++)$#s', $pathinfo, $matches)) {
+            if (0 === strpos($pathinfo, '/altaedicion') && preg_match('#^/altaedicion/(?P<idactividad>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'altaedicion')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaedicionAction',));
             }
 

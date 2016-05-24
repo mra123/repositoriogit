@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -37,7 +38,6 @@ class AltaController extends Controller
 	//select que muestra el listado de actividades que existen en la tabla actividades:
 		$em = $this->getDoctrine()->getManager();
         $nombreActividad = $em->getRepository('AppBundle:Actividad')
-
         ->findAll();
 
 		if($nombreActividad==null){
@@ -47,31 +47,40 @@ class AltaController extends Controller
 		}
 	}
 
+   
+
     /**
      * @Route("/altaedicion/{idactividad}", name="altaedicion")
      */
     public function altaedicionAction($idactividad)  {
-
-    $edicion = new Edicion();
-
+    //recupero el nombre de la actividad para mostrarlo:
+        $em = $this->getDoctrine()->getManager();
+        $nombreActividad = $em->getRepository('AppBundle:Actividad')
+        ->find($idactividad);
+        $nombre = $nombreActividad->getnombreActividad();
+    
+    $edicion = new Edicion();    
+    
+    //Creo el formulario para dar de alta el resto de campos de la tabla:
     $form = $this->createFormBuilder($edicion)
-            ->add('actividadactividad', TextType::class)
+                       
             ->add('fechaEdicion', DateType::class)
             ->add('save', SubmitType::class, array('label' => 'Dar de alta'))
             ->getForm();
+    
+    
+   // $form->handleRequest($request);
 
-    //$form->handleRequest($request);
-
+echo $nombre; 
+    
     if ($form->isSubmitted() && $form->isValid()) {
-       echo "bien hecho!";
-
-        return $this->redirectToRoute('task_success');
+      return $this->redirectToRoute('task_success');
     }
-
-    return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView(), )
-    );
-    }
+    return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView(),));
+   }
 	
+
+
 	/**
      * @Route("/crear_actividades", name="crear_actividades")
      */

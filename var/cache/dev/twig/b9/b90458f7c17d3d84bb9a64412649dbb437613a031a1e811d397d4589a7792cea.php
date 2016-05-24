@@ -16,8 +16,8 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_291d9fba96c6e2866b35cfd358e6a1b89cb178397d3dc7ee9770afb616bb75f2 = $this->env->getExtension("native_profiler");
-        $__internal_291d9fba96c6e2866b35cfd358e6a1b89cb178397d3dc7ee9770afb616bb75f2->enter($__internal_291d9fba96c6e2866b35cfd358e6a1b89cb178397d3dc7ee9770afb616bb75f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
+        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82 = $this->env->getExtension("native_profiler");
+        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82->enter($__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,31 +57,47 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 42
+        // line 52
         echo "       
     </body>
 </html>
 ";
         
-        $__internal_291d9fba96c6e2866b35cfd358e6a1b89cb178397d3dc7ee9770afb616bb75f2->leave($__internal_291d9fba96c6e2866b35cfd358e6a1b89cb178397d3dc7ee9770afb616bb75f2_prof);
+        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82->leave($__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_79631b7d943a2c8eb2fce7e20d8b2486f40cadc250d719e377f5d04e0fe1b19e = $this->env->getExtension("native_profiler");
-        $__internal_79631b7d943a2c8eb2fce7e20d8b2486f40cadc250d719e377f5d04e0fe1b19e->enter($__internal_79631b7d943a2c8eb2fce7e20d8b2486f40cadc250d719e377f5d04e0fe1b19e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85 = $this->env->getExtension("native_profiler");
+        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85->enter($__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
         <h2>Formulario de alta de edición: </h2>
+
+       <ul>
+
 \t\t
-        
+\t\t
+        ";
+        // line 43
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
+        echo "
+    
+\t   \t\t
+   
+\t    
+\t    ";
+        // line 48
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+
 
         ";
         
-        $__internal_79631b7d943a2c8eb2fce7e20d8b2486f40cadc250d719e377f5d04e0fe1b19e->leave($__internal_79631b7d943a2c8eb2fce7e20d8b2486f40cadc250d719e377f5d04e0fe1b19e_prof);
+        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85->leave($__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85_prof);
 
     }
 
@@ -92,7 +108,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     public function getDebugInfo()
     {
-        return array (  77 => 36,  71 => 35,  61 => 42,  59 => 35,  23 => 1,);
+        return array (  94 => 48,  86 => 43,  77 => 36,  71 => 35,  61 => 52,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -132,8 +148,18 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 /*         {% block body %}*/
 /* */
 /*         <h2>Formulario de alta de edición: </h2>*/
+/* */
+/*        <ul>*/
+/* */
 /* 		*/
-/*         */
+/* 		*/
+/*         {{ form_start(form) }}*/
+/*     */
+/* 	   		*/
+/*    */
+/* 	    */
+/* 	    {{ form_end(form) }}*/
+/* */
 /* */
 /*         {% endblock %}*/
 /*        */

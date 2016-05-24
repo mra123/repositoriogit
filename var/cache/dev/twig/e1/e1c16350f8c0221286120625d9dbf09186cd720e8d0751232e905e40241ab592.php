@@ -16,8 +16,8 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_12813788860e6f2fc5cb0271195650d68b852fd4ddbdf3e4711cccfd5201784f = $this->env->getExtension("native_profiler");
-        $__internal_12813788860e6f2fc5cb0271195650d68b852fd4ddbdf3e4711cccfd5201784f->enter($__internal_12813788860e6f2fc5cb0271195650d68b852fd4ddbdf3e4711cccfd5201784f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/consulta_actividades.html.twig"));
+        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b = $this->env->getExtension("native_profiler");
+        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b->enter($__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/consulta_actividades.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,21 +57,21 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 46
+        // line 50
         echo "       
     </body>
 </html>
 ";
         
-        $__internal_12813788860e6f2fc5cb0271195650d68b852fd4ddbdf3e4711cccfd5201784f->leave($__internal_12813788860e6f2fc5cb0271195650d68b852fd4ddbdf3e4711cccfd5201784f_prof);
+        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b->leave($__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e45b553f3caef8cc62f9e11dc1c91d4308b69be0d4127f1d040894cf0e833010 = $this->env->getExtension("native_profiler");
-        $__internal_e45b553f3caef8cc62f9e11dc1c91d4308b69be0d4127f1d040894cf0e833010->enter($__internal_e45b553f3caef8cc62f9e11dc1c91d4308b69be0d4127f1d040894cf0e833010_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d = $this->env->getExtension("native_profiler");
+        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d->enter($__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
@@ -83,23 +83,33 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
         $context['_seq'] = twig_ensure_traversable((isset($context["nombre"]) ? $context["nombre"] : $this->getContext($context, "nombre")));
         foreach ($context['_seq'] as $context["_key"] => $context["nombreActividad"]) {
             // line 40
-            echo "\t\t<li><a href=\"/alta/";
+            echo "
+\t\t<li><a href=\"/altaedicion/";
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "idActividad", array()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "nombreActividad", array()), "html", null, true);
             echo "</li>
+
+\t\t<li><a href=\"/alta/";
+            // line 43
+            echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "idActividad", array()), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "nombreActividad", array()), "html", null, true);
+            echo "</li>
+
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['nombreActividad'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 46
         echo "\t\t</ul>
         
 
         ";
         
-        $__internal_e45b553f3caef8cc62f9e11dc1c91d4308b69be0d4127f1d040894cf0e833010->leave($__internal_e45b553f3caef8cc62f9e11dc1c91d4308b69be0d4127f1d040894cf0e833010_prof);
+        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d->leave($__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d_prof);
 
     }
 
@@ -110,7 +120,7 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 
     public function getDebugInfo()
     {
-        return array (  97 => 42,  86 => 40,  82 => 39,  77 => 36,  71 => 35,  61 => 46,  59 => 35,  23 => 1,);
+        return array (  107 => 46,  96 => 43,  89 => 41,  86 => 40,  82 => 39,  77 => 36,  71 => 35,  61 => 50,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -152,7 +162,11 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 /*         <h2>Listado de actividades: </h2>*/
 /* 		<ul>*/
 /* 		{% for nombreActividad in nombre %}*/
+/* */
+/* 		<li><a href="/altaedicion/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>*/
+/* */
 /* 		<li><a href="/alta/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>*/
+/* */
 /* 		{% endfor %}*/
 /* 		</ul>*/
 /*         */
