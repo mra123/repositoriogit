@@ -16,8 +16,8 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b = $this->env->getExtension("native_profiler");
-        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b->enter($__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/consulta_actividades.html.twig"));
+        $__internal_5681fe5032e8ad61e5f8f78161f4c7674cf4f866d3cc2992fdf8c3e2101af8bf = $this->env->getExtension("native_profiler");
+        $__internal_5681fe5032e8ad61e5f8f78161f4c7674cf4f866d3cc2992fdf8c3e2101af8bf->enter($__internal_5681fe5032e8ad61e5f8f78161f4c7674cf4f866d3cc2992fdf8c3e2101af8bf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/consulta_actividades.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,21 +57,21 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 50
+        // line 49
         echo "       
     </body>
 </html>
 ";
         
-        $__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b->leave($__internal_8e09bb0df0a840b4fb695b4b8850104bbfb24ad9d1f375596277b760b062bd7b_prof);
+        $__internal_5681fe5032e8ad61e5f8f78161f4c7674cf4f866d3cc2992fdf8c3e2101af8bf->leave($__internal_5681fe5032e8ad61e5f8f78161f4c7674cf4f866d3cc2992fdf8c3e2101af8bf_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d = $this->env->getExtension("native_profiler");
-        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d->enter($__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_6f2e9192e0295cb613361a2f54a1ede33a36e6dec365d6498cd01641f26d9248 = $this->env->getExtension("native_profiler");
+        $__internal_6f2e9192e0295cb613361a2f54a1ede33a36e6dec365d6498cd01641f26d9248->enter($__internal_6f2e9192e0295cb613361a2f54a1ede33a36e6dec365d6498cd01641f26d9248_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
@@ -91,25 +91,19 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
             echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "nombreActividad", array()), "html", null, true);
             echo "</li>
 
-\t\t<li><a href=\"/alta/";
-            // line 43
-            echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "idActividad", array()), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "nombreActividad", array()), "html", null, true);
-            echo "</li>
 
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['nombreActividad'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 45
         echo "\t\t</ul>
         
 
         ";
         
-        $__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d->leave($__internal_864c543024bc847b44c57e1e5a13fc85b6bc8a8404dd3f0f1a9d849b9261ad1d_prof);
+        $__internal_6f2e9192e0295cb613361a2f54a1ede33a36e6dec365d6498cd01641f26d9248->leave($__internal_6f2e9192e0295cb613361a2f54a1ede33a36e6dec365d6498cd01641f26d9248_prof);
 
     }
 
@@ -120,7 +114,7 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 
     public function getDebugInfo()
     {
-        return array (  107 => 46,  96 => 43,  89 => 41,  86 => 40,  82 => 39,  77 => 36,  71 => 35,  61 => 50,  59 => 35,  23 => 1,);
+        return array (  101 => 45,  89 => 41,  86 => 40,  82 => 39,  77 => 36,  71 => 35,  61 => 49,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -165,7 +159,6 @@ class __TwigTemplate_ddb27ab1f087f56f6b683557b24bc50bcc9b6502586a56e5c8f2a126416
 /* */
 /* 		<li><a href="/altaedicion/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>*/
 /* */
-/* 		<li><a href="/alta/{{nombreActividad.idActividad}}">{{nombreActividad.nombreActividad}}</li>*/
 /* */
 /* 		{% endfor %}*/
 /* 		</ul>*/

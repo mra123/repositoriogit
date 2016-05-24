@@ -922,3 +922,4 @@ f54722,127.0.0.1,GET,http://localhost:8000/altaedicion/1,1464076498,684610,200
 b6d113,127.0.0.1,GET,http://localhost:8000/altaedicion/1,1464076663,36893e,200
 36893e,127.0.0.1,GET,http://localhost:8000/altaedicion/1,1464076663,,500
 ccbdb7,127.0.0.1,GET,http://localhost:8000/altaedicion/1,1464076879,,200
+4e7786,127.0.0.1,GET,http://localhost:8000/consulta_actividades,1464077559,,200
