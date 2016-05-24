@@ -100,6 +100,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // consultardepartamento
+        if (0 === strpos($pathinfo, '/consultardept') && preg_match('#^/consultardept/(?P<iddept>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'consultardepartamento')), array (  '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarDept',));
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -107,11 +112,6 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::loginAction',  '_route' => 'homepage',);
-        }
-
-        // consultar
-        if (0 === strpos($pathinfo, '/consultardept') && preg_match('#^/consultardept/(?P<iddept>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'consultar')), array (  '_controller' => 'AppBundle\\Controller\\DefaultController::consultarDept',));
         }
 
         // noauto
@@ -176,7 +176,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
             // crear_actividades
             if ($pathinfo === '/crear_actividades') {
-                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::altaAction',  '_route' => 'crear_actividades',);
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::crear_actividadesAction',  '_route' => 'crear_actividades',);
             }
 
         }
@@ -184,6 +184,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // gestionar
         if ($pathinfo === '/gestionar') {
             return array (  '_controller' => 'AppBundle\\Controller\\GestionarController::gestionarAction',  '_route' => 'gestionar',);
+        }
+
+        // consultar
+        if ($pathinfo === '/consultar') {
+            return array (  '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarAction',  '_route' => 'consultar',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

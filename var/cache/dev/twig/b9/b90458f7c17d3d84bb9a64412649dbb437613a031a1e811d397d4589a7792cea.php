@@ -16,8 +16,8 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82 = $this->env->getExtension("native_profiler");
-        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82->enter($__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
+        $__internal_0290dc00672fafc7ae16dee2b7ba67e4e3bebfdd43455853faef5992838e7e3d = $this->env->getExtension("native_profiler");
+        $__internal_0290dc00672fafc7ae16dee2b7ba67e4e3bebfdd43455853faef5992838e7e3d->enter($__internal_0290dc00672fafc7ae16dee2b7ba67e4e3bebfdd43455853faef5992838e7e3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,47 +57,73 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 52
+        // line 60
         echo "       
     </body>
 </html>
 ";
         
-        $__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82->leave($__internal_300b84f06a119f449fdf60e900995e0791b0c4970a36f26e2ed942169a379a82_prof);
+        $__internal_0290dc00672fafc7ae16dee2b7ba67e4e3bebfdd43455853faef5992838e7e3d->leave($__internal_0290dc00672fafc7ae16dee2b7ba67e4e3bebfdd43455853faef5992838e7e3d_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85 = $this->env->getExtension("native_profiler");
-        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85->enter($__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_49f8375f77c17a83b4890b8b5e3a8377ab3f4bbe89b92f158cb2ce5c5cb53c6c = $this->env->getExtension("native_profiler");
+        $__internal_49f8375f77c17a83b4890b8b5e3a8377ab3f4bbe89b92f158cb2ce5c5cb53c6c->enter($__internal_49f8375f77c17a83b4890b8b5e3a8377ab3f4bbe89b92f158cb2ce5c5cb53c6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
         <h2>Formulario de alta de edición: </h2>
-
-       <ul>
-
-\t\t
-\t\t
-        ";
-        // line 43
+\t
+\t\t";
+        // line 39
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
     
-\t   \t\t
+\t\t    ";
+        // line 41
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaEdicion", array()), 'row');
+        echo "
+\t\t    <br/>
+\t\t    ";
+        // line 43
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idciclo", array()), 'row');
+        echo "
+\t\t    <br/>
+\t\t    *Podrá ser: 
+\t\t    \t";
+        // line 46
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
+        echo "
+
+
+\t\t    \t";
+        // line 49
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
+        echo "
+
+\t\t    ";
+        // line 51
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "menoresEdad", array()), 'row');
+        echo "
+\t\t    <br/><br/>
+ \t\t\t";
+        // line 53
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "observaciones", array()), 'row');
+        echo "
    
-\t    
-\t    ";
-        // line 48
+   \t\t   
+   \t\t";
+        // line 56
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 
         ";
         
-        $__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85->leave($__internal_ca2feb5f276c70ba8a0f852e32102724c7552e1c6de2aae8bf67c8b991ed3f85_prof);
+        $__internal_49f8375f77c17a83b4890b8b5e3a8377ab3f4bbe89b92f158cb2ce5c5cb53c6c->leave($__internal_49f8375f77c17a83b4890b8b5e3a8377ab3f4bbe89b92f158cb2ce5c5cb53c6c_prof);
 
     }
 
@@ -108,7 +134,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     public function getDebugInfo()
     {
-        return array (  94 => 48,  86 => 43,  77 => 36,  71 => 35,  61 => 52,  59 => 35,  23 => 1,);
+        return array (  120 => 56,  114 => 53,  109 => 51,  104 => 49,  98 => 46,  92 => 43,  87 => 41,  82 => 39,  77 => 36,  71 => 35,  61 => 60,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -148,17 +174,25 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 /*         {% block body %}*/
 /* */
 /*         <h2>Formulario de alta de edición: </h2>*/
-/* */
-/*        <ul>*/
-/* */
-/* 		*/
-/* 		*/
-/*         {{ form_start(form) }}*/
+/* 	*/
+/* 		{{ form_start(form) }}*/
 /*     */
-/* 	   		*/
+/* 		    {{ form_row(form.fechaEdicion) }}*/
+/* 		    <br/>*/
+/* 		    {{ form_row(form.idciclo) }}*/
+/* 		    <br/>*/
+/* 		    *Podrá ser: */
+/* 		    	{{ form_start(form) }}*/
+/* */
+/* */
+/* 		    	{{ form_end(form) }}*/
+/* */
+/* 		    {{ form_row(form.menoresEdad) }}*/
+/* 		    <br/><br/>*/
+/*  			{{ form_row(form.observaciones) }}*/
 /*    */
-/* 	    */
-/* 	    {{ form_end(form) }}*/
+/*    		   */
+/*    		{{ form_end(form) }}*/
 /* */
 /* */
 /*         {% endblock %}*/

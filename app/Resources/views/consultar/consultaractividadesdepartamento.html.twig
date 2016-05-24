@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+<style>
+
+
+h2 {
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-width: medium;
+	border-color:orange;
+
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 15px;
+	
+}
+hr{
+	color: orange;
+}
+</style>
+	<h2>Gestión de actividades</h2>
+    </head>
+    <body>	
+	<p>Selecciona la actividad a consultar:</p><br><br>
+
+	<ul>
+    {% for nombreActividad in nombre %}
+        <li><a href="/gestionar/{{id.idactividad}}">{{nombreActividad.nombreActividad}}</a></li>
+    </ul>
+    {% endfor %}
+
+    <br><br>
+ 
+  <hr>
+  </body>
+</html>

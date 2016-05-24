@@ -35,17 +35,25 @@
         {% block body %}
 
         <h2>Formulario de alta de edición: </h2>
-
-       <ul>
-
-		
-		
-        {{ form_start(form) }}
+	
+		{{ form_start(form) }}
     
-	   		
+		    {{ form_row(form.fechaEdicion) }}
+		    <br/>
+		    {{ form_row(form.idciclo) }}
+		    <br/>
+		    *Podrá ser: 
+		    	{{ form_start(form) }}
+
+
+		    	{{ form_end(form) }}
+
+		    {{ form_row(form.menoresEdad) }}
+		    <br/><br/>
+ 			{{ form_row(form.observaciones) }}
    
-	    
-	    {{ form_end(form) }}
+   		   
+   		{{ form_end(form) }}
 
 
         {% endblock %}
