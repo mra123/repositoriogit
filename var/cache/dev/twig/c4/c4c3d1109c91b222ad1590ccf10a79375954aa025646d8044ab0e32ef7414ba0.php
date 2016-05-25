@@ -16,8 +16,8 @@ class __TwigTemplate_a8d5346e1d9c127ca8dae2b69aa4282af24e295183d89260656e1dca10c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0a979dc3bd899689f15181bf5107940aa0d4397cfe8a1e9dcdfd4264f98d692e = $this->env->getExtension("native_profiler");
-        $__internal_0a979dc3bd899689f15181bf5107940aa0d4397cfe8a1e9dcdfd4264f98d692e->enter($__internal_0a979dc3bd899689f15181bf5107940aa0d4397cfe8a1e9dcdfd4264f98d692e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "inicio/inicio.html.twig"));
+        $__internal_f0a123796a619aae72ee8fad1e0fa6cf43f358ad8398dc8fe0d04101b583c2cb = $this->env->getExtension("native_profiler");
+        $__internal_f0a123796a619aae72ee8fad1e0fa6cf43f358ad8398dc8fe0d04101b583c2cb->enter($__internal_f0a123796a619aae72ee8fad1e0fa6cf43f358ad8398dc8fe0d04101b583c2cb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "inicio/inicio.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -60,21 +60,20 @@ class __TwigTemplate_a8d5346e1d9c127ca8dae2b69aa4282af24e295183d89260656e1dca10c
         ";
         // line 38
         $this->displayBlock('body', $context, $blocks);
-        // line 54
-        echo "       
-    </body>
+        // line 55
+        echo "    </body>
 </html>
 ";
         
-        $__internal_0a979dc3bd899689f15181bf5107940aa0d4397cfe8a1e9dcdfd4264f98d692e->leave($__internal_0a979dc3bd899689f15181bf5107940aa0d4397cfe8a1e9dcdfd4264f98d692e_prof);
+        $__internal_f0a123796a619aae72ee8fad1e0fa6cf43f358ad8398dc8fe0d04101b583c2cb->leave($__internal_f0a123796a619aae72ee8fad1e0fa6cf43f358ad8398dc8fe0d04101b583c2cb_prof);
 
     }
 
     // line 38
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b89b45ca0d77aca679ba97280d8527c58c554bfe8c16b81913cc5ecdd5e07535 = $this->env->getExtension("native_profiler");
-        $__internal_b89b45ca0d77aca679ba97280d8527c58c554bfe8c16b81913cc5ecdd5e07535->enter($__internal_b89b45ca0d77aca679ba97280d8527c58c554bfe8c16b81913cc5ecdd5e07535_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a61b121444ab677fcce9f642d625580ac39c24eaaf3398caae8c27ba4a2a495e = $this->env->getExtension("native_profiler");
+        $__internal_a61b121444ab677fcce9f642d625580ac39c24eaaf3398caae8c27ba4a2a495e->enter($__internal_a61b121444ab677fcce9f642d625580ac39c24eaaf3398caae8c27ba4a2a495e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 39
         echo "
@@ -88,12 +87,13 @@ class __TwigTemplate_a8d5346e1d9c127ca8dae2b69aa4282af24e295183d89260656e1dca10c
 \t\t<p>Pulsa para consultar una actividad</p>
 \t\t<div class=\"boton\">
 \t\t\t<a href=\"/consultar\">Consultar</a>
-\t\t\t<hr>
 \t\t</div>\t
-
-        ";
+    <br><br>    
+    <hr><hr>    
+    <a href=\"/logout\">Logout</a> 
+    ";
         
-        $__internal_b89b45ca0d77aca679ba97280d8527c58c554bfe8c16b81913cc5ecdd5e07535->leave($__internal_b89b45ca0d77aca679ba97280d8527c58c554bfe8c16b81913cc5ecdd5e07535_prof);
+        $__internal_a61b121444ab677fcce9f642d625580ac39c24eaaf3398caae8c27ba4a2a495e->leave($__internal_a61b121444ab677fcce9f642d625580ac39c24eaaf3398caae8c27ba4a2a495e_prof);
 
     }
 
@@ -104,7 +104,7 @@ class __TwigTemplate_a8d5346e1d9c127ca8dae2b69aa4282af24e295183d89260656e1dca10c
 
     public function getDebugInfo()
     {
-        return array (  80 => 39,  74 => 38,  64 => 54,  62 => 38,  23 => 1,);
+        return array (  79 => 39,  73 => 38,  64 => 55,  62 => 38,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -156,11 +156,11 @@ class __TwigTemplate_a8d5346e1d9c127ca8dae2b69aa4282af24e295183d89260656e1dca10c
 /* 		<p>Pulsa para consultar una actividad</p>*/
 /* 		<div class="boton">*/
 /* 			<a href="/consultar">Consultar</a>*/
-/* 			<hr>*/
 /* 		</div>	*/
-/* */
-/*         {% endblock %}*/
-/*        */
+/*     <br><br>    */
+/*     <hr><hr>    */
+/*     <a href="/logout">Logout</a> */
+/*     {% endblock %}*/
 /*     </body>*/
 /* </html>*/
 /* */

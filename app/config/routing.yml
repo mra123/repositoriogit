@@ -29,11 +29,11 @@ consulta_actividades:
     defaults:  { _controller: AppBundle:Alta:consulta_actividades}
 
 crear_actividades:
-    path:   /crear_actividades
+    path:   /crear_actividades/
     defaults:  { _controller: AppBundle:Alta:crear_actividades }
 
 gestionar:
-    path:   /gestionar
+    path:   /gestionar/{idactividad}
     defaults:  { _controller: AppBundle:Gestionar:gestionar }
 
 consultar:

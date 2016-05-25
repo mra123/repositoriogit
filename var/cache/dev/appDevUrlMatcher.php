@@ -175,15 +175,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             // crear_actividades
-            if ($pathinfo === '/crear_actividades') {
+            if (rtrim($pathinfo, '/') === '/crear_actividades') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'crear_actividades');
+                }
+
                 return array (  '_controller' => 'AppBundle\\Controller\\AltaController::crear_actividadesAction',  '_route' => 'crear_actividades',);
             }
 
         }
 
         // gestionar
-        if ($pathinfo === '/gestionar') {
-            return array (  '_controller' => 'AppBundle\\Controller\\GestionarController::gestionarAction',  '_route' => 'gestionar',);
+        if (0 === strpos($pathinfo, '/gestionar') && preg_match('#^/gestionar/(?P<idactividad>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'gestionar')), array (  '_controller' => 'AppBundle\\Controller\\GestionarController::gestionarAction',));
         }
 
         // consultar

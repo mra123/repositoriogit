@@ -27,24 +27,18 @@ class ConsultarController extends Controller
 	public function consultarDept($iddept)
     {
 	  $query = $this->getDoctrine()->getManager()
-	   ->createQuery('SELECT a.nombreActividad
+	   ->createQuery('SELECT a.nombreActividad, a.idactividad
 					  FROM AppBundle:Actividad a, AppBundle:Gestion g, AppBundle:Usuario u, AppBundle:Edicion e
 					  WHERE g.usuariousuario = u.idusuario and g.edicionedicion = e.idedicion and e.actividadactividad =a.idactividad
 					  and u.departamentodepartamento = :iddept')
 	   ->setParameter('iddept',$iddept);
 	   $nombreActividad = $query->getResult();
 
-
-	   ->createQuery('SELECT a.idactividad
-					  FROM AppBundle:Actividad a
-					  WHERE a.nombreActividad = : $nombreActividad')
-	  
-	   $idActividad = $query->getResult();
-
 	   if($nombreActividad==null){
 		   return new Response("No hay actividades");
 	   }else{
-		   return $this->render('consultar/consultaractividadesdepartamento.html.twig',['nombre'=>$nombreActividad], ['id'=>$idActividad]);
+		   return $this->render('consultar/consultaractividadesdepartamento.html.twig',['nombre'=>$nombreActividad]);
+		   
 		}
 	}	
 	

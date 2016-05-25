@@ -15,15 +15,15 @@ class __TwigTemplate_8607c3e860109f07a0c2c4eea98d04f26cb5e9a775defa24d4c85ecbca7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_85bed4bd7848f37c223dcaec296079f804d35b5d494dce9c6111d485dbecf660 = $this->env->getExtension("native_profiler");
-        $__internal_85bed4bd7848f37c223dcaec296079f804d35b5d494dce9c6111d485dbecf660->enter($__internal_85bed4bd7848f37c223dcaec296079f804d35b5d494dce9c6111d485dbecf660_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultardepartamento.html.twig"));
+        $__internal_2390abb1a9de38df21b77bad6eaf5d3920dfc56962293c02e935a25a4c8f4ae7 = $this->env->getExtension("native_profiler");
+        $__internal_2390abb1a9de38df21b77bad6eaf5d3920dfc56962293c02e935a25a4c8f4ae7->enter($__internal_2390abb1a9de38df21b77bad6eaf5d3920dfc56962293c02e935a25a4c8f4ae7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultardepartamento.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
 <html>
     <head>
         <meta charset=\"UTF-8\" />
-<style>
+   <style>
 
 
 h2 {
@@ -31,19 +31,19 @@ h2 {
     text-align: center;
     border-style: solid;
     border-width: medium;
-\tborder-color:orange;
+  border-color:orange;
 
 }
 
 p {
     font-family: \"Times New Roman\";
     font-size: 15px;
-\t
+  
 }
 hr{
-\tcolor: orange;
+  color: orange;
 }
-</style>
+</style> 
 \t<h2>Gestión de actividades</h2>
     </head>
     <body>\t
@@ -55,11 +55,13 @@ hr{
     </ul>
     <br><br>
  
-  <hr>
+  <hr><hr>
+  <a href=\"/inicio\">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href=\"/logout\">Logout</a>
   </body>
 </html>";
         
-        $__internal_85bed4bd7848f37c223dcaec296079f804d35b5d494dce9c6111d485dbecf660->leave($__internal_85bed4bd7848f37c223dcaec296079f804d35b5d494dce9c6111d485dbecf660_prof);
+        $__internal_2390abb1a9de38df21b77bad6eaf5d3920dfc56962293c02e935a25a4c8f4ae7->leave($__internal_2390abb1a9de38df21b77bad6eaf5d3920dfc56962293c02e935a25a4c8f4ae7_prof);
 
     }
 
@@ -77,7 +79,7 @@ hr{
 /* <html>*/
 /*     <head>*/
 /*         <meta charset="UTF-8" />*/
-/* <style>*/
+/*    <style>*/
 /* */
 /* */
 /* h2 {*/
@@ -85,19 +87,19 @@ hr{
 /*     text-align: center;*/
 /*     border-style: solid;*/
 /*     border-width: medium;*/
-/* 	border-color:orange;*/
+/*   border-color:orange;*/
 /* */
 /* }*/
 /* */
 /* p {*/
 /*     font-family: "Times New Roman";*/
 /*     font-size: 15px;*/
-/* 	*/
+/*   */
 /* }*/
 /* hr{*/
-/* 	color: orange;*/
+/*   color: orange;*/
 /* }*/
-/* </style>*/
+/* </style> */
 /* 	<h2>Gestión de actividades</h2>*/
 /*     </head>*/
 /*     <body>	*/
@@ -109,6 +111,8 @@ hr{
 /*     </ul>*/
 /*     <br><br>*/
 /*  */
-/*   <hr>*/
+/*   <hr><hr>*/
+/*   <a href="/inicio">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;*/
+/*   <a href="/logout">Logout</a>*/
 /*   </body>*/
 /* </html>*/
