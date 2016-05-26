@@ -11,10 +11,16 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 use AppBundle\Entity\Edicion;
 use AppBundle\Entity\Actividad;
 use AppBundle\Entity\Gestion;
+
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use	Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType; 
+use Symfony\Component\Form\FormTypeInterface;
 
 class AltaController extends Controller
 {
@@ -58,6 +64,7 @@ class AltaController extends Controller
         $nombre = $nombreActividad->getnombreActividad();
         echo "Nombre actividad: ".$nombre; 
 
+    //creo el formulario:    
     $edicion = new Edicion();    
     
     $edicion->setActividadactividad($idactividad);
@@ -70,9 +77,18 @@ class AltaController extends Controller
             ->add('menoresEdad', TextType::class, array('label' => '¿Asistirán menores de edad?'))
             ->add('observaciones', TextType::class, array('label' => 'Introduce las observaciones que consideres oportunas:'))
             ->add('save', SubmitType::class, array('label' => 'Dar de alta'))
-            ->getForm();
-    
-    
+            ->add('idciclo', ChoiceType::class, 
+            	array('choices'  => array('DAW1E' => false, 'DAW2E' => true, 'DAW1A' => true, ),
+ 						'multiple' =>true,
+ 						'expanded' =>true,           		
+            	
+            	
+
+
+
+            	))
+		    ->getForm();
+
     $form->handleRequest($request);
 
     return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView(),));
@@ -86,7 +102,10 @@ class AltaController extends Controller
     }
    
    }
-	
+
+
+  
+
 	/**
      * @Route("/crear_actividades", name="crear_actividades")
      */
@@ -115,7 +134,8 @@ class AltaController extends Controller
     }
      return $this->render('alta/crear_actividades.html.twig',array('form' => $form->createView(), ));
 	}
-	
+
+
 
 
   }  

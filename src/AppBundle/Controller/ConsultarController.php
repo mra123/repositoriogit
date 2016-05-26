@@ -35,7 +35,7 @@ class ConsultarController extends Controller
 	   $nombreActividad = $query->getResult();
 
 	   if($nombreActividad==null){
-		   return new Response("No hay actividades");
+		   return $this->render('consultar/error_actividades.html.twig');
 	   }else{
 		   return $this->render('consultar/consultaractividadesdepartamento.html.twig',['nombre'=>$nombreActividad]);
 		   

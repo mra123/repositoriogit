@@ -37,10 +37,13 @@
         <h2>Formulario de alta de edición: </h2>
 	
 		{{ form_start(form) }}
-    
+			    
 		    {{ form_row(form.fechaEdicion) }}
 		    <br/>
 		    {{ form_row(form.idciclo) }}
+		    
+		    <p>checklist de grupos: daw1e, daw2e, daw1a, daw2a, dam1e, dam2e, dam1a, dam2a, 
+		    
 		    <br/>
 		    *Podrá ser: 
 		    	{{ form_start(form) }}
@@ -58,7 +61,7 @@
 
         {% endblock %}
    <hr><hr>
-   <a href="/inicio">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/alta">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
    <a href="/logout">Logout</a>
     </body>
 </html>

@@ -15,8 +15,8 @@ class __TwigTemplate_854dfb0e622da33203a38f1748fbd46f4f881d96eeab18af6ed8a6f98f6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_baf276e77c5ce941ec34aca74cf80aca4f7ed84327cd396f737a7ef9ab30a680 = $this->env->getExtension("native_profiler");
-        $__internal_baf276e77c5ce941ec34aca74cf80aca4f7ed84327cd396f737a7ef9ab30a680->enter($__internal_baf276e77c5ce941ec34aca74cf80aca4f7ed84327cd396f737a7ef9ab30a680_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultaractividadesdepartamento.html.twig"));
+        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54 = $this->env->getExtension("native_profiler");
+        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54->enter($__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultaractividadesdepartamento.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -76,12 +76,12 @@ hr{
     <br><br>
  
   <hr><hr>
-  <a href=\"/inicio\">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href=\"/consultar\">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a href=\"/logout\">Logout</a>
   </body>
 </html>";
         
-        $__internal_baf276e77c5ce941ec34aca74cf80aca4f7ed84327cd396f737a7ef9ab30a680->leave($__internal_baf276e77c5ce941ec34aca74cf80aca4f7ed84327cd396f737a7ef9ab30a680_prof);
+        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54->leave($__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54_prof);
 
     }
 
@@ -142,7 +142,7 @@ hr{
 /*     <br><br>*/
 /*  */
 /*   <hr><hr>*/
-/*   <a href="/inicio">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;*/
+/*   <a href="/consultar">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;*/
 /*   <a href="/logout">Logout</a>*/
 /*   </body>*/
 /* </html>*/
