@@ -19,8 +19,8 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_75fe5217c854aa0c6f608b5e50b2c84a58a70a11ac387680aad17b6e5ca16e77 = $this->env->getExtension("native_profiler");
-        $__internal_75fe5217c854aa0c6f608b5e50b2c84a58a70a11ac387680aad17b6e5ca16e77->enter($__internal_75fe5217c854aa0c6f608b5e50b2c84a58a70a11ac387680aad17b6e5ca16e77_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/alta.html.twig"));
+        $__internal_a60e409f28c5277772213c97de53bf995240dc406c11f3aa1795ebd3ecd589d2 = $this->env->getExtension("native_profiler");
+        $__internal_a60e409f28c5277772213c97de53bf995240dc406c11f3aa1795ebd3ecd589d2->enter($__internal_a60e409f28c5277772213c97de53bf995240dc406c11f3aa1795ebd3ecd589d2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/alta.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -35,62 +35,89 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 7
-        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+        echo " <style>
+
+            .boton {            
+            }
+
+            h2 {
+                color: black;
+                text-align: center;
+                border-style: solid;
+                border-width: medium;
+                border-color:orange;
+
+            }
+
+            p {
+                font-family: \"Times New Roman\";
+                font-size: 15px;
+                
+            }
+            hr{
+                color: orange;
+            }
+
+
+        
+        </style>
     </head>
     <body>
 
         ";
-        // line 11
+        // line 36
         $this->displayBlock('body', $context, $blocks);
-        // line 44
-        echo "    </body>
+        // line 69
+        echo "
+    <hr><hr>
+    <a href=\"/inicio\">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href=\"/logout\">Logout</a>
+    </body>
 </html>
 ";
         
-        $__internal_75fe5217c854aa0c6f608b5e50b2c84a58a70a11ac387680aad17b6e5ca16e77->leave($__internal_75fe5217c854aa0c6f608b5e50b2c84a58a70a11ac387680aad17b6e5ca16e77_prof);
+        $__internal_a60e409f28c5277772213c97de53bf995240dc406c11f3aa1795ebd3ecd589d2->leave($__internal_a60e409f28c5277772213c97de53bf995240dc406c11f3aa1795ebd3ecd589d2_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_02921ff5efee8355167e6d5460b1d1d4ed1be27c155c96d7745edeea1a52b3f7 = $this->env->getExtension("native_profiler");
-        $__internal_02921ff5efee8355167e6d5460b1d1d4ed1be27c155c96d7745edeea1a52b3f7->enter($__internal_02921ff5efee8355167e6d5460b1d1d4ed1be27c155c96d7745edeea1a52b3f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e965c76bc97b7ccca6c9267fce5cc3f163574e40b44996d501eb525e945079d7 = $this->env->getExtension("native_profiler");
+        $__internal_e965c76bc97b7ccca6c9267fce5cc3f163574e40b44996d501eb525e945079d7->enter($__internal_e965c76bc97b7ccca6c9267fce5cc3f163574e40b44996d501eb525e945079d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Welcome!";
         
-        $__internal_02921ff5efee8355167e6d5460b1d1d4ed1be27c155c96d7745edeea1a52b3f7->leave($__internal_02921ff5efee8355167e6d5460b1d1d4ed1be27c155c96d7745edeea1a52b3f7_prof);
+        $__internal_e965c76bc97b7ccca6c9267fce5cc3f163574e40b44996d501eb525e945079d7->leave($__internal_e965c76bc97b7ccca6c9267fce5cc3f163574e40b44996d501eb525e945079d7_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_82b088669d54d15d0f3bd860f3467aa981bfcb3d2f33b4af842a14a0d216da8f = $this->env->getExtension("native_profiler");
-        $__internal_82b088669d54d15d0f3bd860f3467aa981bfcb3d2f33b4af842a14a0d216da8f->enter($__internal_82b088669d54d15d0f3bd860f3467aa981bfcb3d2f33b4af842a14a0d216da8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a3ffccfd6402f4f3658bea0c7dab2324a85b9f637b2cb98d92b39c58089c173a = $this->env->getExtension("native_profiler");
+        $__internal_a3ffccfd6402f4f3658bea0c7dab2324a85b9f637b2cb98d92b39c58089c173a->enter($__internal_a3ffccfd6402f4f3658bea0c7dab2324a85b9f637b2cb98d92b39c58089c173a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         
-        $__internal_82b088669d54d15d0f3bd860f3467aa981bfcb3d2f33b4af842a14a0d216da8f->leave($__internal_82b088669d54d15d0f3bd860f3467aa981bfcb3d2f33b4af842a14a0d216da8f_prof);
+        $__internal_a3ffccfd6402f4f3658bea0c7dab2324a85b9f637b2cb98d92b39c58089c173a->leave($__internal_a3ffccfd6402f4f3658bea0c7dab2324a85b9f637b2cb98d92b39c58089c173a_prof);
 
     }
 
-    // line 11
+    // line 36
     public function block_body($context, array $blocks = array())
     {
-        $__internal_43625b4ee7e266f55e65692d751244e54dc21f770da3e8daf078dbee8ddd42c4 = $this->env->getExtension("native_profiler");
-        $__internal_43625b4ee7e266f55e65692d751244e54dc21f770da3e8daf078dbee8ddd42c4->enter($__internal_43625b4ee7e266f55e65692d751244e54dc21f770da3e8daf078dbee8ddd42c4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_072480cac08217f9fba89978af15d20fc2b4a65c0b346246f7120e6f09634c4f = $this->env->getExtension("native_profiler");
+        $__internal_072480cac08217f9fba89978af15d20fc2b4a65c0b346246f7120e6f09634c4f->enter($__internal_072480cac08217f9fba89978af15d20fc2b4a65c0b346246f7120e6f09634c4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 12
+        // line 37
         echo "       
         ";
-        // line 13
+        // line 38
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 14
+        // line 39
         echo "
-        <h3>ALTA DE UNA EDICIÓN:</h3>
-        <br/><br/>
+        <h2>ALTA DE UNA EDICIÓN:</h2>
+            <p> Antes de dar de alta una edición, hay que crear la actividad asociada. <br> Comprueba que la actividad ya existe y si no, creala: </p>
        
         <div class=\"boton\">
             <a href=\"/consulta_actividades\">Seleccionar una actividad existente</a>
@@ -105,22 +132,22 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
 
    
 ";
-        // line 42
+        // line 67
         echo "     
         ";
         
-        $__internal_43625b4ee7e266f55e65692d751244e54dc21f770da3e8daf078dbee8ddd42c4->leave($__internal_43625b4ee7e266f55e65692d751244e54dc21f770da3e8daf078dbee8ddd42c4_prof);
+        $__internal_072480cac08217f9fba89978af15d20fc2b4a65c0b346246f7120e6f09634c4f->leave($__internal_072480cac08217f9fba89978af15d20fc2b4a65c0b346246f7120e6f09634c4f_prof);
 
     }
 
-    // line 13
+    // line 38
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_e5afd69b187752d46bb11a4da916673dc916e90d4b48940a471b067da1e5efd0 = $this->env->getExtension("native_profiler");
-        $__internal_e5afd69b187752d46bb11a4da916673dc916e90d4b48940a471b067da1e5efd0->enter($__internal_e5afd69b187752d46bb11a4da916673dc916e90d4b48940a471b067da1e5efd0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_c4e8e317a5727284db93d4c82e37254a53594317c5caaceca0c6bcf3a39e6a81 = $this->env->getExtension("native_profiler");
+        $__internal_c4e8e317a5727284db93d4c82e37254a53594317c5caaceca0c6bcf3a39e6a81->enter($__internal_c4e8e317a5727284db93d4c82e37254a53594317c5caaceca0c6bcf3a39e6a81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_e5afd69b187752d46bb11a4da916673dc916e90d4b48940a471b067da1e5efd0->leave($__internal_e5afd69b187752d46bb11a4da916673dc916e90d4b48940a471b067da1e5efd0_prof);
+        $__internal_c4e8e317a5727284db93d4c82e37254a53594317c5caaceca0c6bcf3a39e6a81->leave($__internal_c4e8e317a5727284db93d4c82e37254a53594317c5caaceca0c6bcf3a39e6a81_prof);
 
     }
 
@@ -129,14 +156,9 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
         return "alta/alta.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  117 => 13,  109 => 42,  91 => 14,  89 => 13,  86 => 12,  80 => 11,  69 => 6,  57 => 5,  48 => 44,  46 => 11,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  144 => 38,  136 => 67,  118 => 39,  116 => 38,  113 => 37,  107 => 36,  96 => 6,  84 => 5,  71 => 69,  69 => 36,  38 => 7,  36 => 6,  32 => 5,  26 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -145,7 +167,32 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
 /*         <meta charset="UTF-8" />*/
 /*         <title>{% block title %}Welcome!{% endblock %}</title>*/
 /*         {% block stylesheets %}{% endblock %}*/
-/*         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
+/*  <style>*/
+/* */
+/*             .boton {            */
+/*             }*/
+/* */
+/*             h2 {*/
+/*                 color: black;*/
+/*                 text-align: center;*/
+/*                 border-style: solid;*/
+/*                 border-width: medium;*/
+/*                 border-color:orange;*/
+/* */
+/*             }*/
+/* */
+/*             p {*/
+/*                 font-family: "Times New Roman";*/
+/*                 font-size: 15px;*/
+/*                 */
+/*             }*/
+/*             hr{*/
+/*                 color: orange;*/
+/*             }*/
+/* */
+/* */
+/*         */
+/*         </style>*/
 /*     </head>*/
 /*     <body>*/
 /* */
@@ -153,8 +200,8 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
 /*        */
 /*         {% block javascripts %}{% endblock %}*/
 /* */
-/*         <h3>ALTA DE UNA EDICIÓN:</h3>*/
-/*         <br/><br/>*/
+/*         <h2>ALTA DE UNA EDICIÓN:</h2>*/
+/*             <p> Antes de dar de alta una edición, hay que crear la actividad asociada. <br> Comprueba que la actividad ya existe y si no, creala: </p>*/
 /*        */
 /*         <div class="boton">*/
 /*             <a href="/consulta_actividades">Seleccionar una actividad existente</a>*/
@@ -182,6 +229,10 @@ class __TwigTemplate_200346ad400ac3b9b33b3fba9062bdb9cebecd930de20da77fa35a4cc88
 /*         <P>* Obligatorio nombre y fecha</P>*/
 /*   #}     */
 /*         {% endblock %}*/
+/* */
+/*     <hr><hr>*/
+/*     <a href="/inicio">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;*/
+/*     <a href="/logout">Logout</a>*/
 /*     </body>*/
 /* </html>*/
 /* */

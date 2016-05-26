@@ -4,7 +4,32 @@
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+ <style>
+
+            .boton {            
+            }
+
+            h2 {
+                color: black;
+                text-align: center;
+                border-style: solid;
+                border-width: medium;
+                border-color:orange;
+
+            }
+
+            p {
+                font-family: "Times New Roman";
+                font-size: 15px;
+                
+            }
+            hr{
+                color: orange;
+            }
+
+
+        
+        </style>
     </head>
     <body>
 
@@ -12,8 +37,8 @@
        
         {% block javascripts %}{% endblock %}
 
-        <h3>ALTA DE UNA EDICIÓN:</h3>
-        <br/><br/>
+        <h2>ALTA DE UNA EDICIÓN:</h2>
+            <p> Antes de dar de alta una edición, hay que crear la actividad asociada. <br> Comprueba que la actividad ya existe y si no, creala: </p>
        
         <div class="boton">
             <a href="/consulta_actividades">Seleccionar una actividad existente</a>

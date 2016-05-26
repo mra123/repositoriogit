@@ -93,31 +93,27 @@ class AltaController extends Controller
     public function crear_actividadesAction(Request $request)  {
 	
 	//inserta una actividad en la tabla actividades:
-	$actividad = new Actividad();
+	$nombreActividad = new Actividad();
 
-    $form = $this->createFormBuilder($actividad)
+    $form = $this->createFormBuilder($nombreActividad)
         ->add('nombreActividad', TextType::class, array('label' => 'Nombre actividad: '))
         ->add('save', SubmitType::class, array('label' => 'Dar de alta'))
         ->getForm();
 
-    $form->handleRequest($request);
-
-    return $this->render('alta/crear_actividades.html.twig',array('form' => $form->createView(), ));
+    $form->handleRequest($request);   
     
     if ($form->isSubmitted() && $form->isValid()) {
-
-        $actividad->setNombreActividad($form->getnombreActividad());
+	
         $em = $this->getDoctrine()->getEntityManager();
-        $em->persist($post);
+        $em->persist($nombreActividad);
         $flush = $em->flush();
-
-    //recoger el id de la actividad creada:
-    //    return $this->redirectToRoute('/altaedicion/{idactividad}');
-    }else {
-      return $this->render('error_formulario.html.twig');
+      
+        echo "creada correctamente";
+       $idactividad=$nombreActividad->getIdactividad();
+       
+       return $this->redirectToRoute('altaedicion', array('idactividad' => $idactividad) );
     }
-
-     
+     return $this->render('alta/crear_actividades.html.twig',array('form' => $form->createView(), ));
 	}
 	
 
