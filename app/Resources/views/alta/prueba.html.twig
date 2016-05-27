@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    	<style>
+
+    		.boton {    		
+    		}
+
+			h2 {
+			    color: black;
+			    text-align: center;
+			    border-style: solid;
+			    border-width: medium;
+				border-color:orange;
+
+			}
+
+			p {
+			    font-family: "Times New Roman";
+			    font-size: 15px;
+				
+			}
+			hr{
+				color: orange;
+			}
+
+
+		
+		</style>
+       
+    </head>
+    <body>
+    
+        {% block body %}
+
+        <h2>Listado de grupos: </h2>
+		<ul>
+		{% for ciclo in ciclos %}
+
+		<li> {{ciclo.idciclo}} {{ciclo.nombreCiclo}} {{ciclo.curso}} {{ciclo.turno}}</li>
+
+
+		{% endfor %}
+		</ul>
+        
+
+        {% endblock %}
+   <hr><hr>
+   <a href="/alta">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
+   <a href="/logout">Logout</a>
+    </body>
+</html>

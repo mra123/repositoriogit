@@ -195,6 +195,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarAction',  '_route' => 'consultar',);
         }
 
+        // prueba
+        if ($pathinfo === '/prueba') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AltaController::pruebaAction',  '_route' => 'prueba',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

@@ -40,6 +40,8 @@ consultar:
     path:   /consultar
     defaults:  { _controller: AppBundle:Consultar:consultar }    
 
-
+prueba:
+    path:   /prueba
+    defaults:  { _controller: AppBundle:Alta:prueba }
 
 

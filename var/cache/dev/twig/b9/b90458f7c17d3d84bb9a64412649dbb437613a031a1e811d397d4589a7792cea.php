@@ -16,8 +16,8 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1365be86951f545da946e4d3ea8b4684dbed8fad5e2e5d1e76f1e70a9ddf1339 = $this->env->getExtension("native_profiler");
-        $__internal_1365be86951f545da946e4d3ea8b4684dbed8fad5e2e5d1e76f1e70a9ddf1339->enter($__internal_1365be86951f545da946e4d3ea8b4684dbed8fad5e2e5d1e76f1e70a9ddf1339_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
+        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551 = $this->env->getExtension("native_profiler");
+        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551->enter($__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,7 +57,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 63
+        // line 62
         echo "   <hr><hr>
    <a href=\"/alta\">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
    <a href=\"/logout\">Logout</a>
@@ -65,70 +65,69 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 </html>
 ";
         
-        $__internal_1365be86951f545da946e4d3ea8b4684dbed8fad5e2e5d1e76f1e70a9ddf1339->leave($__internal_1365be86951f545da946e4d3ea8b4684dbed8fad5e2e5d1e76f1e70a9ddf1339_prof);
+        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551->leave($__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f7c45b94aec63f98d2010cca1b8d1977d5119e4340a8e8ebc4df1b070e5ca8f7 = $this->env->getExtension("native_profiler");
-        $__internal_f7c45b94aec63f98d2010cca1b8d1977d5119e4340a8e8ebc4df1b070e5ca8f7->enter($__internal_f7c45b94aec63f98d2010cca1b8d1977d5119e4340a8e8ebc4df1b070e5ca8f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181 = $this->env->getExtension("native_profiler");
+        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181->enter($__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
+\t\t
         <h2>Formulario de alta de edición: </h2>
-\t
+
 \t\t";
-        // line 39
+        // line 40
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
 \t\t\t    
 \t\t    ";
-        // line 41
+        // line 42
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaEdicion", array()), 'row');
         echo "
 \t\t    <br/>
 \t\t    ";
-        // line 43
+        // line 44
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idciclo", array()), 'row');
         echo "
-\t\t    
-\t\t    <p>checklist de grupos: daw1e, daw2e, daw1a, daw2a, dam1e, dam2e, dam1a, dam2a, 
-\t\t    
+\t\t   \t\t
+\t\t \t\t    
 \t\t    <br/>
-\t\t    *Podrá ser: 
+\t\t    
 \t\t    \t";
         // line 49
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
 
-
 \t\t    \t";
-        // line 52
+        // line 51
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 \t\t    ";
-        // line 54
+        // line 53
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "menoresEdad", array()), 'row');
         echo "
 \t\t    <br/><br/>
  \t\t\t";
-        // line 56
+        // line 55
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "observaciones", array()), 'row');
         echo "
    
    \t\t   
    \t\t";
-        // line 59
+        // line 58
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 
         ";
         
-        $__internal_f7c45b94aec63f98d2010cca1b8d1977d5119e4340a8e8ebc4df1b070e5ca8f7->leave($__internal_f7c45b94aec63f98d2010cca1b8d1977d5119e4340a8e8ebc4df1b070e5ca8f7_prof);
+        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181->leave($__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181_prof);
 
     }
 
@@ -139,7 +138,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     public function getDebugInfo()
     {
-        return array (  125 => 59,  119 => 56,  114 => 54,  109 => 52,  103 => 49,  94 => 43,  89 => 41,  84 => 39,  79 => 36,  73 => 35,  61 => 63,  59 => 35,  23 => 1,);
+        return array (  124 => 58,  118 => 55,  113 => 53,  108 => 51,  103 => 49,  95 => 44,  90 => 42,  85 => 40,  79 => 36,  73 => 35,  61 => 62,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -178,20 +177,19 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 /*     */
 /*         {% block body %}*/
 /* */
+/* 		*/
 /*         <h2>Formulario de alta de edición: </h2>*/
-/* 	*/
+/* */
 /* 		{{ form_start(form) }}*/
 /* 			    */
 /* 		    {{ form_row(form.fechaEdicion) }}*/
 /* 		    <br/>*/
 /* 		    {{ form_row(form.idciclo) }}*/
-/* 		    */
-/* 		    <p>checklist de grupos: daw1e, daw2e, daw1a, daw2a, dam1e, dam2e, dam1a, dam2a, */
-/* 		    */
+/* 		   		*/
+/* 		 		    */
 /* 		    <br/>*/
-/* 		    *Podrá ser: */
+/* 		    */
 /* 		    	{{ form_start(form) }}*/
-/* */
 /* */
 /* 		    	{{ form_end(form) }}*/
 /* */

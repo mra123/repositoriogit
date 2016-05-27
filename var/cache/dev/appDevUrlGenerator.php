@@ -50,6 +50,7 @@ class appDevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
         'crear_actividades' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\AltaController::crear_actividadesAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/crear_actividades/',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'gestionar' => array (  0 =>   array (    0 => 'idactividad',  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\GestionarController::gestionarAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'variable',      1 => '/',      2 => '[^/]++',      3 => 'idactividad',    ),    1 =>     array (      0 => 'text',      1 => '/gestionar',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
         'consultar' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/consultar',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
+        'prueba' => array (  0 =>   array (  ),  1 =>   array (    '_controller' => 'AppBundle\\Controller\\AltaController::pruebaAction',  ),  2 =>   array (  ),  3 =>   array (    0 =>     array (      0 => 'text',      1 => '/prueba',    ),  ),  4 =>   array (  ),  5 =>   array (  ),),
     );
         }
     }

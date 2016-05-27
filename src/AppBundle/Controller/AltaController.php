@@ -16,6 +16,8 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use AppBundle\Entity\Edicion;
 use AppBundle\Entity\Actividad;
 use AppBundle\Entity\Gestion;
+use AppBundle\Entity\Grupo;
+use AppBundle\Entity\Ciclo;
 
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use	Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -64,6 +66,16 @@ class AltaController extends Controller
         $nombre = $nombreActividad->getnombreActividad();
         echo "Nombre actividad: ".$nombre; 
 
+    //recupero los grupos que existen en la base de datos:
+
+       $query = $this->getDoctrine()->getManager()
+	   ->createQuery('SELECT c.idciclo, c.nombreCiclo, g.curso, g.turno
+					  FROM AppBundle:Ciclo c, AppBundle:Grupo g
+					  WHERE c.grupogrupo = g.idgrupo ');
+	   $ciclo = $query->getResult();
+
+
+        
     //creo el formulario:    
     $edicion = new Edicion();    
     
@@ -73,25 +85,22 @@ class AltaController extends Controller
     $form = $this->createFormBuilder($edicion)
                     
             ->add('fechaEdicion', DateType::class, array('label' => 'Fecha de la actividad: '))
-            ->add('idciclo', TextType::class, array('label' => 'Ciclo que asistirá: '))
+           // ->add('idciclo', TextType::class, array('label' => 'Ciclo que asistirá: '))
             ->add('menoresEdad', TextType::class, array('label' => '¿Asistirán menores de edad?'))
             ->add('observaciones', TextType::class, array('label' => 'Introduce las observaciones que consideres oportunas:'))
             ->add('save', SubmitType::class, array('label' => 'Dar de alta'))
             ->add('idciclo', ChoiceType::class, 
-            	array('choices'  => array('DAW1E' => false, 'DAW2E' => true, 'DAW1A' => true, ),
+            	array('choices'  => $ciclo,
  						'multiple' =>true,
  						'expanded' =>true,           		
             	
-            	
-
-
-
-            	))
+            	  	))
 		    ->getForm();
 
     $form->handleRequest($request);
-
+ 	//return $this->render('alta/altaedicion.html.twig',['ciclos'=>$ciclos]);
     return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView(),));
+   
     
     if ($form->isSubmitted() && $form->isValid()) {
        //insert
@@ -102,6 +111,30 @@ class AltaController extends Controller
     }
    
    }
+
+
+
+
+	/**
+     * @Route("/prueba", name="prueba")
+     */
+    public function pruebaAction(Request $request)  {
+	
+	//select que muestra el listado de actividades que existen en la tabla actividades:
+		
+ 		$query = $this->getDoctrine()->getManager()
+	   ->createQuery('SELECT c.idciclo, c.nombreCiclo, g.curso, g.turno
+					  FROM AppBundle:Ciclo c, AppBundle:Grupo g
+					  WHERE c.grupogrupo = g.idgrupo ');
+	   $ciclo = $query->getResult();
+
+
+		if($ciclo==null){
+		   return new Response("No hay actividades");
+		}else{
+		   return $this->render('alta/prueba.html.twig',['ciclos'=>$ciclo]);
+		}
+	}
 
 
   
