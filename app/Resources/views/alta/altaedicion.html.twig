@@ -38,23 +38,24 @@
         <h2>Formulario de alta de edición: </h2>
 
 		{{ form_start(form) }}
-			    
+		<h3>Fecha de la actividad: </h3>	    
 		    {{ form_row(form.fechaEdicion) }}
 		    <br/>
-		    {{ form_row(form.idciclo) }}
-		   		
-		 		    
+		 <h3>Selecciona el/los grupos que asistirán:</h3>
+		    {{ form_row(form.idciclo) }}				 		    
 		    <br/>
-		    
-		    	{{ form_start(form) }}
 
-		    	{{ form_end(form) }}
+		 {# Para insertar el listado de grupos: #}    
+		 <p> {{ render(controller('AppBundle:Alta:Grupos')) }} </p>
 
-		    {{ form_row(form.menoresEdad) }}
-		    <br/><br/>
+		 <h3> Observaciones:</h3>  
+		   
  			{{ form_row(form.observaciones) }}
-   
-   		   
+   		<h3>¿Asistirán menores de edad?</h3>
+   			{{ form_row(form.menoresEdad) }}
+   		  		   
+		    <br/>
+		       
    		{{ form_end(form) }}
 
 

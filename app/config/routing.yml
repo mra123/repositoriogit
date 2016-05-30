@@ -44,4 +44,10 @@ prueba:
     path:   /prueba
     defaults:  { _controller: AppBundle:Alta:prueba }
 
+profesores:
+    path:   /profesores/
+    defaults:  { _controller: AppBundle:Alta:profesores }
 
+agregarprofesor:
+    path:   /agregarprofesor/{idusuario}
+    defaults:  { _controller: AppBundle:Alta:agregarprofesor }

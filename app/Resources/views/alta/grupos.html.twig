@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>    	
+    </head>
+    <body>
+    
+        {% block body %}
+
+        <h4>Listado de grupos: </h4>
+		<ul>
+		{% for ciclo in ciclos %}
+
+		<li> {{ciclo.idciclo}}.&nbsp; {{ciclo.nombreCiclo}}, &nbsp; Curso: {{ciclo.curso}}, &nbsp;Turno: &nbsp; {{ciclo.turno}}</li>
+		{% endfor %}
+		</ul>
+        {% endblock %}
+  
+    </body>
+</html>

@@ -74,7 +74,7 @@ class Edicion
      *   @ORM\JoinColumn(name="Estado_idEstado", referencedColumnName="idEstado")
      * })
      */
-    private $estadoestado;
+    private $estadoestado = '1';
 
 
 

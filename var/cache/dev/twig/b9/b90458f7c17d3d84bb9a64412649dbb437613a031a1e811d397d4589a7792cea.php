@@ -16,8 +16,8 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551 = $this->env->getExtension("native_profiler");
-        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551->enter($__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
+        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5 = $this->env->getExtension("native_profiler");
+        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5->enter($__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -57,7 +57,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         ";
         // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 62
+        // line 63
         echo "   <hr><hr>
    <a href=\"/alta\">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
    <a href=\"/logout\">Logout</a>
@@ -65,15 +65,15 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 </html>
 ";
         
-        $__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551->leave($__internal_6a3a06de41ce077efa7c24281fa97da8a2522302b38f81ca97d068c24074e551_prof);
+        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5->leave($__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5_prof);
 
     }
 
     // line 35
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181 = $this->env->getExtension("native_profiler");
-        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181->enter($__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54 = $this->env->getExtension("native_profiler");
+        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54->enter($__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 36
         echo "
@@ -84,50 +84,50 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         // line 40
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
-\t\t\t    
+\t\t<h3>Fecha de la actividad: </h3>\t    
 \t\t    ";
         // line 42
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaEdicion", array()), 'row');
         echo "
 \t\t    <br/>
+\t\t <h3>Selecciona el/los grupos que asistirán:</h3>
 \t\t    ";
-        // line 44
+        // line 45
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idciclo", array()), 'row');
-        echo "
-\t\t   \t\t
-\t\t \t\t    
+        echo "\t\t\t\t \t\t    
 \t\t    <br/>
-\t\t    
-\t\t    \t";
+
+\t\t ";
+        // line 48
+        echo "    
+\t\t <p> ";
         // line 49
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
-        echo "
+        echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AppBundle:Alta:Grupos"));
+        echo " </p>
 
-\t\t    \t";
-        // line 51
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-        echo "
-
-\t\t    ";
-        // line 53
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "menoresEdad", array()), 'row');
-        echo "
-\t\t    <br/><br/>
+\t\t <h3> Observaciones:</h3>  
+\t\t   
  \t\t\t";
-        // line 55
+        // line 53
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "observaciones", array()), 'row');
         echo "
-   
-   \t\t   
+   \t\t<h3>¿Asistirán menores de edad?</h3>
+   \t\t\t";
+        // line 55
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "menoresEdad", array()), 'row');
+        echo "
+   \t\t  \t\t   
+\t\t    <br/>
+\t\t       
    \t\t";
-        // line 58
+        // line 59
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 
         ";
         
-        $__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181->leave($__internal_1a105b2d12c35bfee1fb001e562cceeff43c6689104778212956a349fda9c181_prof);
+        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54->leave($__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54_prof);
 
     }
 
@@ -138,7 +138,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 
     public function getDebugInfo()
     {
-        return array (  124 => 58,  118 => 55,  113 => 53,  108 => 51,  103 => 49,  95 => 44,  90 => 42,  85 => 40,  79 => 36,  73 => 35,  61 => 62,  59 => 35,  23 => 1,);
+        return array (  124 => 59,  117 => 55,  112 => 53,  105 => 49,  102 => 48,  96 => 45,  90 => 42,  85 => 40,  79 => 36,  73 => 35,  61 => 63,  59 => 35,  23 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -181,23 +181,24 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 /*         <h2>Formulario de alta de edición: </h2>*/
 /* */
 /* 		{{ form_start(form) }}*/
-/* 			    */
+/* 		<h3>Fecha de la actividad: </h3>	    */
 /* 		    {{ form_row(form.fechaEdicion) }}*/
 /* 		    <br/>*/
-/* 		    {{ form_row(form.idciclo) }}*/
-/* 		   		*/
-/* 		 		    */
+/* 		 <h3>Selecciona el/los grupos que asistirán:</h3>*/
+/* 		    {{ form_row(form.idciclo) }}				 		    */
 /* 		    <br/>*/
-/* 		    */
-/* 		    	{{ form_start(form) }}*/
 /* */
-/* 		    	{{ form_end(form) }}*/
+/* 		 {# Para insertar el listado de grupos: #}    */
+/* 		 <p> {{ render(controller('AppBundle:Alta:Grupos')) }} </p>*/
 /* */
-/* 		    {{ form_row(form.menoresEdad) }}*/
-/* 		    <br/><br/>*/
+/* 		 <h3> Observaciones:</h3>  */
+/* 		   */
 /*  			{{ form_row(form.observaciones) }}*/
-/*    */
-/*    		   */
+/*    		<h3>¿Asistirán menores de edad?</h3>*/
+/*    			{{ form_row(form.menoresEdad) }}*/
+/*    		  		   */
+/* 		    <br/>*/
+/* 		       */
 /*    		{{ form_end(form) }}*/
 /* */
 /* */

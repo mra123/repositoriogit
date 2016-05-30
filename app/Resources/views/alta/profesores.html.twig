@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>    	
+    </head>
+    <body>
+    
+        {% block body %}
+
+      <h3>Selecciona el profesor que asistirá:</h3>
+		<ul>
+
+        {% for username in agregarprofesor %}
+         
+        <li><a href="/agregarprofesor/{{username.idusuario}}">{{username.username}}</a></li>
+           
+        {% endfor %}
+        </ul>
+
+         <hr><hr>
+    <a href="/inicio">Volver al inicio</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/logout">Logout</a>
+    
+        {% endblock %}
+  
+    </body>
+</html>
+
+ 
+            

@@ -100,6 +100,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // grupos
+        if ($pathinfo === '/grupos') {
+            return array (  '_controller' => 'AppBundle\\Controller\\AltaController::gruposAction',  '_route' => 'grupos',);
+        }
+
         // consultardepartamento
         if (0 === strpos($pathinfo, '/consultardept') && preg_match('#^/consultardept/(?P<iddept>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'consultardepartamento')), array (  '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarDept',));
@@ -195,9 +200,26 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AppBundle\\Controller\\ConsultarController::consultarAction',  '_route' => 'consultar',);
         }
 
-        // prueba
-        if ($pathinfo === '/prueba') {
-            return array (  '_controller' => 'AppBundle\\Controller\\AltaController::pruebaAction',  '_route' => 'prueba',);
+        if (0 === strpos($pathinfo, '/pr')) {
+            // prueba
+            if ($pathinfo === '/prueba') {
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::pruebaAction',  '_route' => 'prueba',);
+            }
+
+            // profesores
+            if (rtrim($pathinfo, '/') === '/profesores') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'profesores');
+                }
+
+                return array (  '_controller' => 'AppBundle\\Controller\\AltaController::profesoresAction',  '_route' => 'profesores',);
+            }
+
+        }
+
+        // agregarprofesor
+        if (0 === strpos($pathinfo, '/agregarprofesor') && preg_match('#^/agregarprofesor/(?P<idusuario>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'agregarprofesor')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::agregarprofesorAction',));
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
