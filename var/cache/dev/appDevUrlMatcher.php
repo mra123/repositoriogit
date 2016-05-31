@@ -218,7 +218,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // agregarprofesor
-        if (0 === strpos($pathinfo, '/agregarprofesor') && preg_match('#^/agregarprofesor/(?P<idusuario>[^/]++)$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/agregarprofesor') && preg_match('#^/agregarprofesor/(?P<idusuario>[^/]++)/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'agregarprofesor')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::agregarprofesorAction',));
         }
 

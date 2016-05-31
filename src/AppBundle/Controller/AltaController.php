@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 
 
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,13 +21,13 @@ use AppBundle\Entity\Gestion;
 use AppBundle\Entity\Grupo;
 use AppBundle\Entity\Ciclo;
 use AppBundle\Entity\Usuario;
+use AppBundle\Entity\StringToArrayTransformer;
 
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use	Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType; 
 use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\Form\ChoiceList\Loader\ChoiceLoaderInterface;
-
 
 
 class AltaController extends Controller
@@ -105,8 +106,7 @@ class AltaController extends Controller
     $edicion->setEstadoestado($idestado);
     $edicion->setActividadactividad($idactividad);    
    
-  echo "si1"; 
-        
+  echo "si1";    
        
 
     
@@ -119,8 +119,8 @@ class AltaController extends Controller
             ->add('fechaEdicion', DateType::class, array('label' => ' '))
             ->add('menoresEdad', ChoiceType::class, array( 	'label' => ' ',
             												'choices' => array(
-            													'SI' =>TRUE,
-            													'NO' =>FALSE,
+            													'SI' =>1,
+            													'NO' =>0,
             													),
 
             												'expanded' =>TRUE,))
@@ -129,6 +129,9 @@ class AltaController extends Controller
             ->add('observaciones', TextAreaType::class, array('label' =>' '))
            
             ->add('idciclo', ChoiceType::class, array(
+                     
+
+
                                                          
                                'choices'=> $ciclo,
                                'label'=> " ",
@@ -137,7 +140,7 @@ class AltaController extends Controller
                                 return $value;
                                    },
 
-                                'multiple' =>TRUE,
+                                'multiple' =>false,
                                 'expanded' =>TRUE,
                                 'required' =>TRUE,
 
@@ -149,6 +152,7 @@ class AltaController extends Controller
           	    
 		    
             ->getForm();
+
     $edicion->setEstadoestado($idestado);
     $form->handleRequest($request);
 
@@ -163,11 +167,14 @@ echo "si2";
         $em->persist($edicion);
         $em->flush();
 
+       
 echo "si3";    	
 	
     	return $this->redirectToRoute('profesores');
    
     } 
+    $id = $edicion->getIdedicion();
+
     
 echo "si4";
     
@@ -213,42 +220,48 @@ echo "si4";
 				  ORDER BY c.departamentodepartamento ASC  ');
 
 	$username = $query->getResult();
- 	/*
- 	$form = $this->createFormBuilder($username)
-	->add('username', ChoiceType::class, array(
-                             'label' => ' ',
-             	            'choices'  =>  $username->getData(),
-                         	'multiple' =>TRUE,
-                      		'expanded' =>TRUE,
-                    ))
 
-	->add('save', SubmitType::class, array('label' => 'Asignar profesores a actividad'))
-                      	  	
-	->getForm();
+	//recupero la última idedicion: 
+       $query = $this->getDoctrine()->getManager()
+       ->createQuery('SELECT MAX(c.idedicion)
+                      FROM AppBundle:Edicion c                                         
+                   ');   
+        $idedicion = $query->getSingleResult();
 
-    $form->handleRequest($request);*/
 
- 	
-    return $this->render('alta/profesores.html.twig',array('agregarprofesor'=>$username));
-   
-    
-    if ($form->isSubmitted() && $form->isValid()) {
-       //insert
-    
-    } 
-    else {
-      return $this->render('error_formulario.html.twig');
-    }
-   
+    return $this->render('alta/profesores.html.twig',array('agregarprofesor'=>$username, 'agregarprofesor2'=>$idedicion ));
+  
    }
 
    /**
-     * @Route("/agregarprofesor/{idusuario}", name="agregarprofesor")
+     * @Route("/agregarprofesor/{idusuario}/{id}", name="agregarprofesor")
      */
-    public function agregarprofesorAction(\AppBundle\Entity\Usuario $idusuario, Request $request){  
+    public function agregarprofesorAction(\AppBundle\Entity\Usuario $idusuario,\AppBundle\Entity\Edicion $id, Request $request){  
 
-	//hacer el insert:
+ 		//recupero la última idedicion: 
+   //    $query = $this->getDoctrine()->getManager()
+    //   ->createQuery('SELECT MAX(c.idedicion)
+     //                 FROM AppBundle:Edicion c                                         
+      //             ');   
+     //   $edicion = $query->getSingleResult();
+     //$id=implode(',', $edicion);
+      
+     // echo $id;
+      //$id2 = \AppBundle\Entity\Edicion $id;
+      
+      $gestion = new Gestion();
+      $gestion->setEdicionedicion($id);
+      $gestion->setUsuariousuario($idusuario);
+
+      $em = $this->getDoctrine()->getEntityManager();
+      $em->persist($gestion);
+      $em->flush();
+     
+	
+
+
 echo "entra";	
+
  	
     return $this->render('alta/agregarprofesor.html.twig', ['idusuario'=>$idusuario]);
    

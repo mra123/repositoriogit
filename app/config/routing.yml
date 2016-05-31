@@ -49,5 +49,5 @@ profesores:
     defaults:  { _controller: AppBundle:Alta:profesores }
 
 agregarprofesor:
-    path:   /agregarprofesor/{idusuario}
+    path:   /agregarprofesor/{idusuario}/{id}
     defaults:  { _controller: AppBundle:Alta:agregarprofesor }

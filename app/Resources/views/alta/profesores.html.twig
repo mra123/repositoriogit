@@ -10,9 +10,12 @@
 		<ul>
 
         {% for username in agregarprofesor %}
-         
-        <li><a href="/agregarprofesor/{{username.idusuario}}">{{username.username}}</a></li>
+        {% for username2 in agregarprofesor2 %}
+        
+          
+       <li><a href="/agregarprofesor/{{username.idusuario}}/{{username2}}">{{username.username}}</a></li> 
            
+        {% endfor %}
         {% endfor %}
         </ul>
 
