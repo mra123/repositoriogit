@@ -222,6 +222,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'agregarprofesor')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::agregarprofesorAction',));
         }
 
+        // consultaractividad
+        if (0 === strpos($pathinfo, '/consultaractividad') && preg_match('#^/consultaractividad/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'consultaractividad')), array (  '_controller' => 'AppBundle\\Controller\\AltaController::consultaractividadAction',));
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

@@ -10,19 +10,33 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         $this->parent = false;
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
+            'stylesheets' => array($this, 'block_stylesheets'),
             'body' => array($this, 'block_body'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5 = $this->env->getExtension("native_profiler");
-        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5->enter($__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
+        $__internal_f935b7f20c4bea78ee94d1b4617db120e76a7e79027eab3d8af42a5f62163e16 = $this->env->getExtension("native_profiler");
+        $__internal_f935b7f20c4bea78ee94d1b4617db120e76a7e79027eab3d8af42a5f62163e16->enter($__internal_f935b7f20c4bea78ee94d1b4617db120e76a7e79027eab3d8af42a5f62163e16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "alta/altaedicion.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
 <html>
     <head>
+    \t<meta charset=\"UTF-8\" />
+        <title>";
+        // line 5
+        $this->displayBlock('title', $context, $blocks);
+        echo "</title>
+        ";
+        // line 6
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 7
+        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("favicon.ico"), "html", null, true);
+        echo "\" />
 
     \t<style>
 
@@ -55,9 +69,9 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
     <body>
     
         ";
-        // line 35
+        // line 39
         $this->displayBlock('body', $context, $blocks);
-        // line 63
+        // line 67
         echo "   <hr><hr>
    <a href=\"/alta\">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
    <a href=\"/logout\">Logout</a>
@@ -65,69 +79,92 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 </html>
 ";
         
-        $__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5->leave($__internal_ee9c0e194de3c314c189e1b04ca262d66b3fb300b430e946964ca51044ae29d5_prof);
+        $__internal_f935b7f20c4bea78ee94d1b4617db120e76a7e79027eab3d8af42a5f62163e16->leave($__internal_f935b7f20c4bea78ee94d1b4617db120e76a7e79027eab3d8af42a5f62163e16_prof);
 
     }
 
-    // line 35
+    // line 5
+    public function block_title($context, array $blocks = array())
+    {
+        $__internal_9c1bbca6cd2753cabd44f7c2be5c9bebf1f7a7a89e2ed53eb9e1adc452e63eb0 = $this->env->getExtension("native_profiler");
+        $__internal_9c1bbca6cd2753cabd44f7c2be5c9bebf1f7a7a89e2ed53eb9e1adc452e63eb0->enter($__internal_9c1bbca6cd2753cabd44f7c2be5c9bebf1f7a7a89e2ed53eb9e1adc452e63eb0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Actividades";
+        
+        $__internal_9c1bbca6cd2753cabd44f7c2be5c9bebf1f7a7a89e2ed53eb9e1adc452e63eb0->leave($__internal_9c1bbca6cd2753cabd44f7c2be5c9bebf1f7a7a89e2ed53eb9e1adc452e63eb0_prof);
+
+    }
+
+    // line 6
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        $__internal_3ba810c0115bc875d52c484c2b77313bfcc3a9e19ecc8c0a3d385c44e9a622b0 = $this->env->getExtension("native_profiler");
+        $__internal_3ba810c0115bc875d52c484c2b77313bfcc3a9e19ecc8c0a3d385c44e9a622b0->enter($__internal_3ba810c0115bc875d52c484c2b77313bfcc3a9e19ecc8c0a3d385c44e9a622b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        
+        $__internal_3ba810c0115bc875d52c484c2b77313bfcc3a9e19ecc8c0a3d385c44e9a622b0->leave($__internal_3ba810c0115bc875d52c484c2b77313bfcc3a9e19ecc8c0a3d385c44e9a622b0_prof);
+
+    }
+
+    // line 39
     public function block_body($context, array $blocks = array())
     {
-        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54 = $this->env->getExtension("native_profiler");
-        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54->enter($__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_db27bcc2b4dd727582b73157ab302d558361b4a5ace1f13232a35297369823f6 = $this->env->getExtension("native_profiler");
+        $__internal_db27bcc2b4dd727582b73157ab302d558361b4a5ace1f13232a35297369823f6->enter($__internal_db27bcc2b4dd727582b73157ab302d558361b4a5ace1f13232a35297369823f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 36
+        // line 40
         echo "
 \t\t
         <h2>Formulario de alta de edición: </h2>
 
 \t\t";
-        // line 40
+        // line 44
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
 \t\t<h3>Fecha de la actividad: </h3>\t    
 \t\t    ";
-        // line 42
+        // line 46
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaEdicion", array()), 'row');
         echo "
 \t\t    <br/>
-\t\t <h3>Selecciona el/los grupos que asistirán:</h3>
+\t\t <h3>Selecciona el grupo que asistirá:</h3>
 \t\t    ";
-        // line 45
+        // line 49
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "idciclo", array()), 'row');
         echo "\t\t\t\t \t\t    
 \t\t    <br/>
 
 \t\t ";
-        // line 48
+        // line 52
         echo "    
 \t\t <p> ";
-        // line 49
+        // line 53
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("AppBundle:Alta:Grupos"));
         echo " </p>
 
 \t\t <h3> Observaciones:</h3>  
 \t\t   
  \t\t\t";
-        // line 53
+        // line 57
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "observaciones", array()), 'row');
         echo "
    \t\t<h3>¿Asistirán menores de edad?</h3>
    \t\t\t";
-        // line 55
+        // line 59
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "menoresEdad", array()), 'row');
         echo "
    \t\t  \t\t   
 \t\t    <br/>
 \t\t       
    \t\t";
-        // line 59
+        // line 63
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
 
         ";
         
-        $__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54->leave($__internal_63247d51bd7abd17e39680743dfe06757c36f81c68f4616b648bf8ffdb0fdd54_prof);
+        $__internal_db27bcc2b4dd727582b73157ab302d558361b4a5ace1f13232a35297369823f6->leave($__internal_db27bcc2b4dd727582b73157ab302d558361b4a5ace1f13232a35297369823f6_prof);
 
     }
 
@@ -136,14 +173,23 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
         return "alta/altaedicion.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  124 => 59,  117 => 55,  112 => 53,  105 => 49,  102 => 48,  96 => 45,  90 => 42,  85 => 40,  79 => 36,  73 => 35,  61 => 63,  59 => 35,  23 => 1,);
+        return array (  161 => 63,  154 => 59,  149 => 57,  142 => 53,  139 => 52,  133 => 49,  127 => 46,  122 => 44,  116 => 40,  110 => 39,  99 => 6,  87 => 5,  75 => 67,  73 => 39,  37 => 7,  35 => 6,  31 => 5,  25 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
 /* <html>*/
 /*     <head>*/
+/*     	<meta charset="UTF-8" />*/
+/*         <title>{% block title %}Actividades{% endblock %}</title>*/
+/*         {% block stylesheets %}{% endblock %}*/
+/*         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />*/
 /* */
 /*     	<style>*/
 /* */
@@ -184,7 +230,7 @@ class __TwigTemplate_6aef676290501a06ea1269eb09cdb5d099c6f2b6f866a6a0275cb4eea46
 /* 		<h3>Fecha de la actividad: </h3>	    */
 /* 		    {{ form_row(form.fechaEdicion) }}*/
 /* 		    <br/>*/
-/* 		 <h3>Selecciona el/los grupos que asistirán:</h3>*/
+/* 		 <h3>Selecciona el grupo que asistirá:</h3>*/
 /* 		    {{ form_row(form.idciclo) }}				 		    */
 /* 		    <br/>*/
 /* */

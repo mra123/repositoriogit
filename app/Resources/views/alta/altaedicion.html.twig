@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+    	<meta charset="UTF-8" />
+        <title>{% block title %}Actividades{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
     	<style>
 
@@ -41,7 +45,7 @@
 		<h3>Fecha de la actividad: </h3>	    
 		    {{ form_row(form.fechaEdicion) }}
 		    <br/>
-		 <h3>Selecciona el/los grupos que asistirán:</h3>
+		 <h3>Selecciona el grupo que asistirá:</h3>
 		    {{ form_row(form.idciclo) }}				 		    
 		    <br/>
 

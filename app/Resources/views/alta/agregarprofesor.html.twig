@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>    	
+    <head>    
+    <meta charset="UTF-8" />
+        <title>{% block title %}Actividades{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />	
     </head>
     <body>
     
         {% block body %}
-
+       
         <h2> Profesor agregado correctamente</h2>
 
-            <p> Si deseas agregar más profesores, <a href="/profesores"> haz click aquí</a></p>
+            <p> Si deseas agregar más PROFESORES, <a href="/profesores"> haz click aquí</a></p>
+           
             <p> Si ya has acabado, vuelve al <a href="/inicio"> inicio  </a></p>
-
-
-
+        
+           
+            <p> <a href="/consultaractividad/{{idedicion.idedicion}}"> Consulta  </a> los datos de la actividad que acabas de crear</p>
+           
         {% endblock %}
   
     </body>

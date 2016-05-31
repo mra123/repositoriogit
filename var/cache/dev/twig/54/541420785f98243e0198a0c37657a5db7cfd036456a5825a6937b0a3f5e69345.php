@@ -15,8 +15,8 @@ class __TwigTemplate_854dfb0e622da33203a38f1748fbd46f4f881d96eeab18af6ed8a6f98f6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54 = $this->env->getExtension("native_profiler");
-        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54->enter($__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultaractividadesdepartamento.html.twig"));
+        $__internal_6d215989e1b0bbff7a133b1cbe84782d1d200afbe6f2c5c8e462a01eaa02f028 = $this->env->getExtension("native_profiler");
+        $__internal_6d215989e1b0bbff7a133b1cbe84782d1d200afbe6f2c5c8e462a01eaa02f028->enter($__internal_6d215989e1b0bbff7a133b1cbe84782d1d200afbe6f2c5c8e462a01eaa02f028_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "consultar/consultaractividadesdepartamento.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -63,7 +63,7 @@ hr{
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["nombreActividad"], "nombreActividad", array()), "html", null, true);
             echo "</a></li>
-    </ul>
+   
         
 
     ";
@@ -72,7 +72,8 @@ hr{
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['nombreActividad'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 39
-        echo "
+        echo "     </ul>
+
     <br><br>
  
   <hr><hr>
@@ -81,7 +82,7 @@ hr{
   </body>
 </html>";
         
-        $__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54->leave($__internal_328d7026ea3a50060c28f12738acb06321e82df05d13f0fab5fed22bbb994a54_prof);
+        $__internal_6d215989e1b0bbff7a133b1cbe84782d1d200afbe6f2c5c8e462a01eaa02f028->leave($__internal_6d215989e1b0bbff7a133b1cbe84782d1d200afbe6f2c5c8e462a01eaa02f028_prof);
 
     }
 
@@ -134,10 +135,11 @@ hr{
 /*     {% for nombreActividad in nombre %}*/
 /*          */
 /*         <li><a href="/gestionar/{{nombreActividad.idactividad}}">{{nombreActividad.nombreActividad}}</a></li>*/
-/*     </ul>*/
+/*    */
 /*         */
 /* */
 /*     {% endfor %}*/
+/*      </ul>*/
 /* */
 /*     <br><br>*/
 /*  */

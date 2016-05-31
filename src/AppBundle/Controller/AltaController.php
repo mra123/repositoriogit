@@ -2,9 +2,6 @@
 
 namespace AppBundle\Controller;
 
-
-
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -87,7 +84,7 @@ class AltaController extends Controller
                      ');      
        $ciclo = $query->getResult();
 
-//recupero los nombres:
+	//recupero los nombres:
     $query = $this->getDoctrine()->getManager()
        ->createQuery('SELECT c.idciclo, c.nombreCiclo, g.curso, g.turno
                       FROM AppBundle:Ciclo c, AppBundle:Grupo g
@@ -95,10 +92,10 @@ class AltaController extends Controller
                       ORDER BY c.idciclo ASC  ');
        $ciclo2 = $query->getResult();
 
-/*foreach ($ciclo2 as $c){
+												/*foreach ($ciclo2 as $c){
 
-    $ciclo=$c['idciclo']." ".$c['nombreCiclo']." ".$c['curso']." ".$c['turno'];
-} */           
+												    $ciclo=$c['idciclo']." ".$c['nombreCiclo']." ".$c['curso']." ".$c['turno'];
+												} */           
 
     //creo el formulario:    
     $edicion = new Edicion();    
@@ -106,15 +103,11 @@ class AltaController extends Controller
     $edicion->setEstadoestado($idestado);
     $edicion->setActividadactividad($idactividad);    
    
-  echo "si1";    
-       
-
+ 
     
     //Creo el formulario para dar de alta el resto de campos de la tabla:
 
     $form = $this->createFormBuilder($edicion)
-    
-     
     
             ->add('fechaEdicion', DateType::class, array('label' => ' '))
             ->add('menoresEdad', ChoiceType::class, array( 	'label' => ' ',
@@ -129,10 +122,7 @@ class AltaController extends Controller
             ->add('observaciones', TextAreaType::class, array('label' =>' '))
            
             ->add('idciclo', ChoiceType::class, array(
-                     
-
-
-                                                         
+                                                
                                'choices'=> $ciclo,
                                'label'=> " ",
                   	           'choice_label' => function ($value, $key, $index) {    
@@ -149,46 +139,34 @@ class AltaController extends Controller
 
  			->add('save', SubmitType::class, array('label' => 'Dar de alta'))
 
-          	    
-		    
             ->getForm();
 
-    $edicion->setEstadoestado($idestado);
-    $form->handleRequest($request);
+	    $edicion->setEstadoestado($idestado);
+	    $form->handleRequest($request);
 
+		    
+		    if ($form->isSubmitted() && $form->isValid()) {
 
-echo "si2";
-    
-    
-    if ($form->isSubmitted() && $form->isValid()) {
+		       //insert
+		        $em = $this->getDoctrine()->getEntityManager();
+		        $em->persist($edicion);
+		        $em->flush();
 
-       //insert
-        $em = $this->getDoctrine()->getEntityManager();
-        $em->persist($edicion);
-        $em->flush();
-
-       
-echo "si3";    	
-	
-    	return $this->redirectToRoute('profesores');
+		    	return $this->redirectToRoute('profesores');
+		   
+		    } 
+		       
+		 		return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView()));
+		   
    
-    } 
-    $id = $edicion->getIdedicion();
-
-    
-echo "si4";
-    
- return $this->render('alta/altaedicion.html.twig',array('form' => $form->createView()));
-   
-   
-   }
+  	 }
 
 	/**
      * @Route("/grupos", name="grupos")
      */
     public function gruposAction(Request $request)  {
 	
-	//select que muestra el listado de actividades que existen en la tabla actividades:
+	//select que muestra el listado de grupos que existen:
 		
  		$query = $this->getDoctrine()->getManager()
 	   ->createQuery('SELECT c.idciclo, c.nombreCiclo, g.curso, g.turno
@@ -215,9 +193,9 @@ echo "si4";
 	//recupero el listado de profesores:  
 	 $query = $this->getDoctrine()->getManager()
 	 ->createQuery('SELECT c.username, c.idusuario
-			  FROM AppBundle:Usuario c
-				  WHERE c.tipoUsuariotipoUsuario BETWEEN 1 AND 3
-				  ORDER BY c.departamentodepartamento ASC  ');
+			  	FROM AppBundle:Usuario c
+				WHERE c.tipoUsuariotipoUsuario BETWEEN 1 AND 3
+				ORDER BY c.departamentodepartamento ASC  ');
 
 	$username = $query->getResult();
 
@@ -238,17 +216,7 @@ echo "si4";
      */
     public function agregarprofesorAction(\AppBundle\Entity\Usuario $idusuario,\AppBundle\Entity\Edicion $id, Request $request){  
 
- 		//recupero la última idedicion: 
-   //    $query = $this->getDoctrine()->getManager()
-    //   ->createQuery('SELECT MAX(c.idedicion)
-     //                 FROM AppBundle:Edicion c                                         
-      //             ');   
-     //   $edicion = $query->getSingleResult();
-     //$id=implode(',', $edicion);
-      
-     // echo $id;
-      //$id2 = \AppBundle\Entity\Edicion $id;
-      
+ 		      
       $gestion = new Gestion();
       $gestion->setEdicionedicion($id);
       $gestion->setUsuariousuario($idusuario);
@@ -257,13 +225,7 @@ echo "si4";
       $em->persist($gestion);
       $em->flush();
      
-	
-
-
-echo "entra";	
-
- 	
-    return $this->render('alta/agregarprofesor.html.twig', ['idusuario'=>$idusuario]);
+    return $this->render('alta/agregarprofesor.html.twig', ['idusuario'=>$idusuario, 'idedicion'=>$id]);
    
     
     if ($form->isSubmitted() && $form->isValid()) {
@@ -276,9 +238,7 @@ echo "entra";
    
    }
 
-  
-
-	/**
+  	/**
      * @Route("/crear_actividades", name="crear_actividades")
      */
     public function crear_actividadesAction(Request $request)  {
@@ -306,6 +266,24 @@ echo "entra";
     }
      return $this->render('alta/crear_actividades.html.twig',array('form' => $form->createView(), ));
 	}
+
+    /**
+     * @Route("/consultaractividad/{idedicion}", name="consultaractividad")
+     */
+       public function consultaractividadAction(\AppBundle\Entity\Edicion $id, Request $request){  
+
+        $em = $this->getDoctrine()->getManager();
+        $datosEdicion = $em->getRepository('AppBundle:Edicion')
+        ->findBy($id);
+
+          if($datosEdicion==null){
+             return new Response("No existe esa edición");
+          }else{
+             return $this->render('alta/consultaractividad.html.twig',['nombre'=>$datosEdicion]);
+          }
+        }
+           
+          
 
 
 

@@ -42,6 +42,10 @@ class ConsultarController extends Controller
 		}
 	}	
 	
+	/**
+     * @Route("/consultaractividad/{idactividad}", name="consultaractividad")
+     */
+
 	}
 ?>
 

@@ -51,3 +51,7 @@ profesores:
 agregarprofesor:
     path:   /agregarprofesor/{idusuario}/{id}
     defaults:  { _controller: AppBundle:Alta:agregarprofesor }
+
+consultaractividad:
+    path:   /consultaractividad/{id}
+    defaults:  { _controller: AppBundle:Alta:consultaractividad }

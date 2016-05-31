@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+       <style>
+
+
+h2 {
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-width: medium;
+  border-color:orange;
+
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 15px;
+  
+}
+hr{
+  color: orange;
+}
+</style>
+	
+    </head>
+    <body>	
+    <h2>Edición: </h2>
+
+    {% for datos in datosEdicion %}
+
+    <p>{{idedicion.username}}</p>
+
+    {% endfor %}
+
+ 
+  <hr><hr>
+  <a href="/consultar">Volver atrás</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/logout">Logout</a>
+  </body>
+</html>
